@@ -23,6 +23,6 @@ namespace CapaDatos
             //conect.ConnectionString = "workstation id = Caprs-Proyecto.mssql.somee.com; packet size = 4096; user id = tewci_SQLLogin_1; pwd = hqa384cwt1; data source = CAPRS - Proyecto.mssql.somee.com; persist security info=False; initial catalog = CAPRS - Proyecto";
 
             return conect;
-        }
+        }   
     }
 }

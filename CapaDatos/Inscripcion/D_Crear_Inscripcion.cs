@@ -26,13 +26,13 @@ namespace CapaDatos.Inscripcion
 
             SqlCommand cmd = null;
             SqlConnection cn = Conexion.Instancia.Conectar();
-            cmd = new SqlCommand("select Alumnd_DNI from Alumno");
+            cmd = new SqlCommand("select Alum_DNI from Alumno",cn);
 
             cn.Open();
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                if (dni == dr["Alumn_dni"].ToString())
+                if (dni == dr["Alum_DNI"].ToString())
                 {
                     cmd.Connection.Close();
                     return true;
@@ -46,7 +46,7 @@ namespace CapaDatos.Inscripcion
         {
             SqlCommand cmd = null;
             SqlConnection cn = Conexion.Instancia.Conectar();
-            cmd = new SqlCommand("Alumno_Crear");
+            cmd = new SqlCommand("Alumno_Crear",cn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Alum_Nombre", ea.Alumn_nombre);
             cmd.Parameters.AddWithValue("@Alum_ApellidoPaterno", ea.Alumn_ApellidoPaterno);

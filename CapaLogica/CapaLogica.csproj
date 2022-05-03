@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alumno\L_Alumno.cs" />
+    <Compile Include="Pagos\L_Pagos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +54,9 @@
       <Project>{d0a274b8-eb7b-43e0-8fab-fdf7c099b2fa}</Project>
       <Name>CapaEntidad</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

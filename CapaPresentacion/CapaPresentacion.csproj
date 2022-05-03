@@ -65,6 +65,18 @@
     <Compile Include="Inscripcion\p_inscripcionprincipal.Designer.cs">
       <DependentUpon>p_inscripcionprincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pagos\Emitir_Pension_Ventana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos\Emitir_Pension_Ventana.Designer.cs">
+      <DependentUpon>Emitir_Pension_Ventana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos\Ventana_principal_Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos\Ventana_principal_Pagos.Designer.cs">
+      <DependentUpon>Ventana_principal_Pagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Inscripcion\Crear_inscripcion.resx">
@@ -72,6 +84,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inscripcion\p_inscripcionprincipal.resx">
       <DependentUpon>p_inscripcionprincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagos\Emitir_Pension_Ventana.resx">
+      <DependentUpon>Emitir_Pension_Ventana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagos\Ventana_principal_Pagos.resx">
+      <DependentUpon>Ventana_principal_Pagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
