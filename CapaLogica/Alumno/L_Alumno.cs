@@ -9,6 +9,15 @@ namespace CapaLogica
 {
     public class L_Alumno
     {
+        #region Singleton
+        private static readonly L_Alumno _instancia = new L_Alumno();
+        public static L_Alumno Instancia
+        {
+            get { return L_Alumno._instancia; }
+        }
+        #endregion
+        #region metodos
+
         public bool crear_alumno(E_Alumno ea )
         {
 
@@ -31,5 +40,7 @@ namespace CapaLogica
             return lista;
 
         }
+        #endregion metodos
+
     }
 }

@@ -19,7 +19,9 @@ namespace CapaDatos
         public SqlConnection Conectar()
         {
             SqlConnection conect = new SqlConnection();
-            conect.ConnectionString = "Data Source=CAPRS-Proyecto.mssql.somee.com; Initial Catalog=CAPRS-Proyecto; User ID = tewci_SQLLogin_1;Password=hqa384cwt1;Integrated Security=true";
+            conect.ConnectionString = "Server=CAPRS-Proyecto.mssql.somee.com; Database=CAPRS-Proyecto; User ID =tewci_SQLLogin_1;Password=hqa384cwt1;Trusted_Connection=False;Packet Size=4096;";
+            //conect.ConnectionString = "workstation id = Caprs-Proyecto.mssql.somee.com; packet size = 4096; user id = tewci_SQLLogin_1; pwd = hqa384cwt1; data source = CAPRS - Proyecto.mssql.somee.com; persist security info=False; initial catalog = CAPRS - Proyecto";
+
             return conect;
         }
     }

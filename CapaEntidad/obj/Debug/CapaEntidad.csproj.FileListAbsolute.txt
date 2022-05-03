@@ -1,0 +1,6 @@
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaEntidad\obj\Debug\CapaEntidad.pdb
