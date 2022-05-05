@@ -7,25 +7,24 @@ using CapaDatos.Becas;
 using CapaEntidad.Alumno;
 namespace CapaLogica.Becas
 {
-    public class CL_BecaHijoTrabajador
+    internal class CL_B_Hermano
     {
-
         #region Singleton
 
-        private static readonly CL_BecaHijoTrabajador _instancia = new CL_BecaHijoTrabajador();
+        private static readonly CL_B_Hermano _instancia = new CL_B_Hermano();
 
-        public static CL_BecaHijoTrabajador Instancia
+        public static CL_B_Hermano Instancia
         {
-            get { return CL_BecaHijoTrabajador._instancia; }
+            get { return CL_B_Hermano._instancia; }
         }
-                
+
         #endregion
         #region metodos
 
         public E_Alumno retornarAlumno(String DNI)
         {
             E_Alumno a = new E_Alumno();
-            a = CD_BecaHijoTrabajador.Instancia.Mostrar(DNI);
+            a = cd_beca_hermano.Instancia.Mostrar(DNI); 
             return a;
         }
 

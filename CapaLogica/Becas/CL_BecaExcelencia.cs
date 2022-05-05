@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CapaDatos.Becas;
 using CapaEntidad.Alumno;
+using CapaDatos.Becas;
 namespace CapaLogica.Becas
 {
-    public class CL_BecaHijoTrabajador
+    internal class CL_BecaExcelencia
     {
 
         #region Singleton
 
-        private static readonly CL_BecaHijoTrabajador _instancia = new CL_BecaHijoTrabajador();
+        private static readonly CL_BecaExcelencia _instancia = new CL_BecaExcelencia();
 
-        public static CL_BecaHijoTrabajador Instancia
+        public static CL_BecaExcelencia Instancia
         {
-            get { return CL_BecaHijoTrabajador._instancia; }
+            get { return CL_BecaExcelencia._instancia; }
         }
-                
+
         #endregion
         #region metodos
 
