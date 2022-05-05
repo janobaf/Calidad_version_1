@@ -27,7 +27,7 @@ namespace CapaDatos.Inscripcion
             SqlCommand cmd = null;
             SqlConnection cn = Conexion.Instancia.Conectar();
             cmd = new SqlCommand("select Alum_DNI from Alumno",cn);
-
+             
             cn.Open();
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
@@ -41,6 +41,32 @@ namespace CapaDatos.Inscripcion
             cmd.Connection.Close();
 
             return false;
+        }
+
+        public void Modificar_Alumnos_Inscripcion(E_Alumno ea)
+        {
+            SqlCommand cmd = null;
+            SqlConnection cn = Conexion.Instancia.Conectar();
+            cmd = new SqlCommand("Alumno_Editar", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@N_Alum_ID", ea.Alum_ID);
+
+            cmd.Parameters.AddWithValue("@Alum_Nombre", ea.Alumn_nombre);
+            cmd.Parameters.AddWithValue("@Alum_ApellidoPaterno", ea.Alumn_ApellidoPaterno);
+            cmd.Parameters.AddWithValue("@Alum_ApellidoMaterno", ea.Alumn_ApellidoMaterno);
+            cmd.Parameters.AddWithValue("@Alum_Direccion", ea.Alumn_Direccion);
+            cmd.Parameters.AddWithValue("@Alum_FechNaci", ea.Alumn_Fechnaci);
+            cmd.Parameters.AddWithValue("@Alum_Tipo", ea.Alumn_Tipo);
+            cmd.Parameters.AddWithValue("@@Alum_FechInscripcion", ea.Alumn_fechInscripcion);
+            cmd.Parameters.AddWithValue("@Alum_DNI", ea.Alumn_dni);
+            cmd.Parameters.AddWithValue("@Alum_ApoderadoNombre", ea.Alumn_ApoderadoNombre);
+            cmd.Parameters.AddWithValue("@Alum_ApoderadoApePaterno", ea.Alumn_ApoderadoApellido);
+            cmd.Parameters.AddWithValue("@Alum_ApoderadoApeMaterno", ea.Alumn_ApoderadoMaterno);
+            cmd.Parameters.AddWithValue("@Alum_Estado", ea.Alumn_Estado);
+            cn.Open();
+            cmd.ExecuteNonQuery();
+
+            cmd.Connection.Close();
         }
         public void Crear_Alumnos_Inscripcion (E_Alumno ea)
         {
@@ -61,6 +87,8 @@ namespace CapaDatos.Inscripcion
             cmd.Parameters.AddWithValue("@Alum_ApoderadoApeMaterno", ea.Alumn_ApoderadoMaterno);
             cmd.Parameters.AddWithValue("@Alum_Estado", ea.Alumn_Estado);
             cmd.Parameters.AddWithValue("@Alum_Grado", ea.Alumn_Grado);
+            cmd.Parameters.AddWithValue("@id", ea.Alum_ID);
+
             cn.Open();
             cmd.ExecuteNonQuery();
 

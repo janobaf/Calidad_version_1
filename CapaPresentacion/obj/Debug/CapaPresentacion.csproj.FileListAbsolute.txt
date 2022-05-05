@@ -20,3 +20,4 @@ C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.Inscripcion.Crear_inscripcion.resources
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.Pagos.Emitir_Pension_Ventana.resources
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.Pagos.Ventana_principal_Pagos.resources
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.Inscripcion.Modificar_Alumno.resources

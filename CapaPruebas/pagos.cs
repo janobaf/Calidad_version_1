@@ -16,5 +16,8 @@ namespace CapaPruebas
             float pago_obtenido = pagos.pagos(promedio, pension);
             Assert.AreEqual(pago_esperado, pago_obtenido);
         }
+
+
+       
     }
 }

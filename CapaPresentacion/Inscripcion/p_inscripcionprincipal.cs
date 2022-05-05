@@ -39,5 +39,11 @@ namespace CapaPresentacion
         {
             openchildform(new Crear_inscripcion());
         }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            openchildform(new Modificar_Alumno());
+
+        }
     }
 }

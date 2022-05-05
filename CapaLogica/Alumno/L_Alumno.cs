@@ -32,7 +32,18 @@ namespace CapaLogica
              return false;
 
         }
+        public bool modificar_alumno(E_Alumno ea)
+        {
 
+            if (D_Crear_Inscripcion.Instancia.validar_dni(ea.Alumn_dni))
+            {
+
+                D_Crear_Inscripcion.Instancia.Modificar_Alumnos_Inscripcion(ea);
+                return true;
+
+            }
+            return false;
+        }
         public List<E_Alumno> listar_alumnos()
         {
             List<E_Alumno> lista = new List<E_Alumno>(); ;

@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Becas\CD_BecaHijoTrabajador.cs" />
+    <Compile Include="Becas\CD_becaorfandad.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Inscripcion\D_Crear_Inscripcion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -59,6 +59,12 @@
     <Compile Include="Inscripcion\Crear_inscripcion.Designer.cs">
       <DependentUpon>Crear_inscripcion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inscripcion\Modificar_Alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscripcion\Modificar_Alumno.Designer.cs">
+      <DependentUpon>Modificar_Alumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inscripcion\p_inscripcionprincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Inscripcion\Crear_inscripcion.resx">
       <DependentUpon>Crear_inscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inscripcion\Modificar_Alumno.resx">
+      <DependentUpon>Modificar_Alumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inscripcion\p_inscripcionprincipal.resx">
       <DependentUpon>p_inscripcionprincipal.cs</DependentUpon>
