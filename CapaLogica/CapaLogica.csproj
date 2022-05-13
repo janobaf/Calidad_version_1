@@ -42,8 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alumno\L_Alumno.cs" />
+    <Compile Include="Becas\CL_BecaExcelencia.cs" />
     <Compile Include="Becas\CL_BecaHijoTrabajador.cs" />
     <Compile Include="Becas\CL_BecaOrfandad.cs" />
+    <Compile Include="Becas\CL_B_Hermano.cs" />
     <Compile Include="Pagos\L_Pagos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

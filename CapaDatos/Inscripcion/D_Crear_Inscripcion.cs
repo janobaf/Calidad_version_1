@@ -99,7 +99,7 @@ namespace CapaDatos.Inscripcion
             List<E_Alumno> aux = new List<E_Alumno>();
             SqlCommand cmd = null;
             SqlConnection cn = Conexion.Instancia.Conectar();
-            cmd = new SqlCommand("Alumno_Mostrar");
+            cmd = new SqlCommand("Alumno_Mostrar" , cn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Alum_Dni", DNI);
             cn.Open();
