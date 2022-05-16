@@ -20,6 +20,9 @@ namespace CapaDatos.Becas
         #endregion
         #region metodos
 
+
+
+
         public E_Alumno Mostrar(string DNI)
         {
             E_Alumno alumno = new E_Alumno();

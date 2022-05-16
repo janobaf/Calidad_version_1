@@ -20,88 +20,80 @@ namespace CapaDatos.Inscripcion
         #endregion
         #region metodos
 
-        public bool validar_dni(string dni )
 
+        public bool  Modificar_Alumnos_Inscripcion(E_Alumno ea)
         {
-
             SqlCommand cmd = null;
-            SqlConnection cn = Conexion.Instancia.Conectar();
-            cmd = new SqlCommand("select Alum_DNI from Alumno",cn);
-             
-            cn.Open();
-            SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
+            bool validar = false;
+            try
             {
-                if (dni == dr["Alum_DNI"].ToString())
-                {
-                    cmd.Connection.Close();
-                    return true;
-                }
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("Alumno_Editar", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@N_Alum_ID", ea.Alum_ID);
+
+                cmd.Parameters.AddWithValue("@Alum_Nombre", ea.Alumn_nombre);
+                cmd.Parameters.AddWithValue("@Alum_ApellidoPaterno", ea.Alumn_ApellidoPaterno);
+                cmd.Parameters.AddWithValue("@Alum_ApellidoMaterno", ea.Alumn_ApellidoMaterno);
+                cmd.Parameters.AddWithValue("@Alum_Direccion", ea.Alumn_Direccion);
+                cmd.Parameters.AddWithValue("@Alum_FechNaci", ea.Alumn_Fechnaci);
+                cmd.Parameters.AddWithValue("@Alum_Tipo", ea.Alumn_Tipo);
+                cmd.Parameters.AddWithValue("@@Alum_FechInscripcion", ea.Alumn_fechInscripcion);
+                cmd.Parameters.AddWithValue("@Alum_DNI", ea.Alumn_dni);
+                cmd.Parameters.AddWithValue("@Alum_ApoderadoNombre", ea.Alumn_ApoderadoNombre);
+                cmd.Parameters.AddWithValue("@Alum_ApoderadoApePaterno", ea.Alumn_ApoderadoApellido);
+                cmd.Parameters.AddWithValue("@Alum_ApoderadoApeMaterno", ea.Alumn_ApoderadoMaterno);
+                cmd.Parameters.AddWithValue("@Alum_Estado", ea.Alumn_Estado);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0) validar = true;
+            } catch (Exception e) { throw e; }
+             finally { cmd.Connection.Close(); }
+
+            return validar;
+           
+        }
+        public bool Crear_Alumnos_Inscripcion (E_Alumno ea)
+        {
+            SqlCommand cmd = null;
+            SqlConnection cn = Conexion.Instancia.Conectar();
+            bool verificar = false;
+            try
+            {
+                cmd = new SqlCommand("Alumno_Crear", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Alum_Nombre", ea.Alumn_nombre);
+                cmd.Parameters.AddWithValue("@Alum_ApellidoPaterno", ea.Alumn_ApellidoPaterno);
+                cmd.Parameters.AddWithValue("@Alum_ApellidoMaterno", ea.Alumn_ApellidoMaterno);
+                cmd.Parameters.AddWithValue("@Alum_Direccion", ea.Alumn_Direccion);
+                cmd.Parameters.AddWithValue("@Alum_FechNaci", ea.Alumn_Fechnaci);
+                cmd.Parameters.AddWithValue("@Alum_Tipo", ea.Alumn_Tipo);
+                cmd.Parameters.AddWithValue("@@Alum_FechInscripcion", ea.Alumn_fechInscripcion);
+                cmd.Parameters.AddWithValue("@Alum_DNI", ea.Alumn_dni);
+                cmd.Parameters.AddWithValue("@Alum_ApoderadoNombre", ea.Alumn_ApoderadoNombre);
+                cmd.Parameters.AddWithValue("@Alum_ApoderadoApePaterno", ea.Alumn_ApoderadoApellido);
+                cmd.Parameters.AddWithValue("@Alum_ApoderadoApeMaterno", ea.Alumn_ApoderadoMaterno);
+                cmd.Parameters.AddWithValue("@Alum_Estado", ea.Alumn_Estado);
+                cmd.Parameters.AddWithValue("@Alum_Grado", ea.Alumn_Grado);
+                cmd.Parameters.AddWithValue("@id", ea.Alum_ID);
+
+                cn.Open();
+                int i =cmd.ExecuteNonQuery();
+                if(i>0) { verificar = true; }
             }
-            cmd.Connection.Close();
-
-            return false;
+          
+            catch(Exception ex) { throw ex; }
+            finally { cmd.Connection.Close(); }
+            return verificar;
         }
-
-        public void Modificar_Alumnos_Inscripcion(E_Alumno ea)
-        {
-            SqlCommand cmd = null;
-            SqlConnection cn = Conexion.Instancia.Conectar();
-            cmd = new SqlCommand("Alumno_Editar", cn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@N_Alum_ID", ea.Alum_ID);
-
-            cmd.Parameters.AddWithValue("@Alum_Nombre", ea.Alumn_nombre);
-            cmd.Parameters.AddWithValue("@Alum_ApellidoPaterno", ea.Alumn_ApellidoPaterno);
-            cmd.Parameters.AddWithValue("@Alum_ApellidoMaterno", ea.Alumn_ApellidoMaterno);
-            cmd.Parameters.AddWithValue("@Alum_Direccion", ea.Alumn_Direccion);
-            cmd.Parameters.AddWithValue("@Alum_FechNaci", ea.Alumn_Fechnaci);
-            cmd.Parameters.AddWithValue("@Alum_Tipo", ea.Alumn_Tipo);
-            cmd.Parameters.AddWithValue("@@Alum_FechInscripcion", ea.Alumn_fechInscripcion);
-            cmd.Parameters.AddWithValue("@Alum_DNI", ea.Alumn_dni);
-            cmd.Parameters.AddWithValue("@Alum_ApoderadoNombre", ea.Alumn_ApoderadoNombre);
-            cmd.Parameters.AddWithValue("@Alum_ApoderadoApePaterno", ea.Alumn_ApoderadoApellido);
-            cmd.Parameters.AddWithValue("@Alum_ApoderadoApeMaterno", ea.Alumn_ApoderadoMaterno);
-            cmd.Parameters.AddWithValue("@Alum_Estado", ea.Alumn_Estado);
-            cn.Open();
-            cmd.ExecuteNonQuery();
-
-            cmd.Connection.Close();
-        }
-        public void Crear_Alumnos_Inscripcion (E_Alumno ea)
-        {
-            SqlCommand cmd = null;
-            SqlConnection cn = Conexion.Instancia.Conectar();
-            cmd = new SqlCommand("Alumno_Crear",cn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Alum_Nombre", ea.Alumn_nombre);
-            cmd.Parameters.AddWithValue("@Alum_ApellidoPaterno", ea.Alumn_ApellidoPaterno);
-            cmd.Parameters.AddWithValue("@Alum_ApellidoMaterno", ea.Alumn_ApellidoMaterno);
-            cmd.Parameters.AddWithValue("@Alum_Direccion", ea.Alumn_Direccion);
-            cmd.Parameters.AddWithValue("@Alum_FechNaci", ea.Alumn_Fechnaci);
-            cmd.Parameters.AddWithValue("@Alum_Tipo", ea.Alumn_Tipo);
-            cmd.Parameters.AddWithValue("@@Alum_FechInscripcion", ea.Alumn_fechInscripcion);
-            cmd.Parameters.AddWithValue("@Alum_DNI", ea.Alumn_dni);
-            cmd.Parameters.AddWithValue("@Alum_ApoderadoNombre", ea.Alumn_ApoderadoNombre);
-            cmd.Parameters.AddWithValue("@Alum_ApoderadoApePaterno", ea.Alumn_ApoderadoApellido);
-            cmd.Parameters.AddWithValue("@Alum_ApoderadoApeMaterno", ea.Alumn_ApoderadoMaterno);
-            cmd.Parameters.AddWithValue("@Alum_Estado", ea.Alumn_Estado);
-            cmd.Parameters.AddWithValue("@Alum_Grado", ea.Alumn_Grado);
-            cmd.Parameters.AddWithValue("@id", ea.Alum_ID);
-
-            cn.Open();
-            cmd.ExecuteNonQuery();
-
-            cmd.Connection.Close();
-        }
-        public List<E_Alumno> Listar_alumnos_Inscripcion(string DNI)
+        public List<E_Alumno> Listar_alumnos_Inscripcion()
         {
             List<E_Alumno> aux = new List<E_Alumno>();
             SqlCommand cmd = null;
             SqlConnection cn = Conexion.Instancia.Conectar();
             cmd = new SqlCommand("Alumno_Mostrar" , cn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Alum_Dni", DNI);
+           
             cn.Open();
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())

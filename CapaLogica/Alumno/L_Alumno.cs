@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaDatos.Inscripcion;
+using CapaDatos.Alumnos;
 using CapaEntidad.Alumno;
 namespace CapaLogica
 {
@@ -21,13 +22,11 @@ namespace CapaLogica
         public bool crear_alumno(E_Alumno ea )
         {
 
-            if (D_Crear_Inscripcion.Instancia.validar_dni(ea.Alumn_dni))
-            {
+            if (CD_Alumno.Instancia.validar_dni(ea.Alumn_dni)==false)
+                if(D_Crear_Inscripcion.Instancia.Crear_Alumnos_Inscripcion(ea))
+                    return true;
 
-                D_Crear_Inscripcion.Instancia.Crear_Alumnos_Inscripcion(ea);
-                return true;
-
-            }
+            
 
              return false;
 
@@ -35,19 +34,16 @@ namespace CapaLogica
         public bool modificar_alumno(E_Alumno ea)
         {
 
-            if (D_Crear_Inscripcion.Instancia.validar_dni(ea.Alumn_dni))
-            {
+            if (CD_Alumno.Instancia.validar_dni(ea.Alumn_dni))
+                if(D_Crear_Inscripcion.Instancia.Modificar_Alumnos_Inscripcion(ea))
+                    return true;
 
-                D_Crear_Inscripcion.Instancia.Modificar_Alumnos_Inscripcion(ea);
-                return true;
-
-            }
             return false;
         }
         public List<E_Alumno> listar_alumnos()
         {
             List<E_Alumno> lista = new List<E_Alumno>(); ;
-
+            lista = D_Crear_Inscripcion.Instancia.Listar_alumnos_Inscripcion();
             return lista;
 
         }

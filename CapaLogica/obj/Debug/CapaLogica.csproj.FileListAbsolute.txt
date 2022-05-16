@@ -9,3 +9,5 @@ C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\obj\Debug
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\obj\Debug\CapaLogica.dll
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\obj\Debug\CapaLogica.Properties.Resources.resources
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\obj\Debug\CapaLogica.csproj.GenerateResource.cache

@@ -22,7 +22,7 @@ namespace CapaDatos.Calificaciones
 
          public E_Calificaciones mostrar_calificaciones(string dni )
         {
-            E_Calificaciones aux  = new E_Calificaciones();
+            E_Calificaciones aux  = new E_Calificaciones(); 
 
 
             SqlCommand cmd = null;
