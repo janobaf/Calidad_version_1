@@ -182,6 +182,7 @@
             this.Pagar.Text = "CREAR";
             this.Pagar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.Pagar.UseVisualStyleBackColor = true;
+            this.Pagar.Click += new System.EventHandler(this.Pagar_Click);
             // 
             // Emitir_Pension_Ventana
             // 

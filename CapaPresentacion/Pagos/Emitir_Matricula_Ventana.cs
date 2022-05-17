@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion.Pagos
 {
-    public partial class Emitir_Pension_Ventana : Form
+    public partial class Emitir_Matricula_Ventana : Form
     {
-        public Emitir_Pension_Ventana()
+        public Emitir_Matricula_Ventana()
         {
             InitializeComponent();
         }
 
-        private void Pagar_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

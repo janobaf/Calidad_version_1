@@ -40,5 +40,10 @@ namespace CapaPresentacion.Pagos
             openchildform(new Emitir_Pension_Ventana());
 
         }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            openchildform(new Emitir_Matricula_Ventana());
+        }
     }
 }

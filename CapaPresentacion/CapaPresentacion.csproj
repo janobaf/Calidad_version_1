@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>CapaPresentacion</RootNamespace>
     <AssemblyName>CapaPresentacion</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -71,6 +72,12 @@
     <Compile Include="Inscripcion\p_inscripcionprincipal.Designer.cs">
       <DependentUpon>p_inscripcionprincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pagos\Emitir_Matricula_Ventana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos\Emitir_Matricula_Ventana.Designer.cs">
+      <DependentUpon>Emitir_Matricula_Ventana.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pagos\Emitir_Pension_Ventana.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +101,9 @@
     <EmbeddedResource Include="Inscripcion\p_inscripcionprincipal.resx">
       <DependentUpon>p_inscripcionprincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pagos\Emitir_Matricula_Ventana.resx">
+      <DependentUpon>Emitir_Matricula_Ventana.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pagos\Emitir_Pension_Ventana.resx">
       <DependentUpon>Emitir_Pension_Ventana.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +118,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
