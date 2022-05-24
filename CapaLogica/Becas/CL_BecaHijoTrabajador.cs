@@ -4,7 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaDatos.Becas;
+using CapaDatos.Alumnos;
 using CapaEntidad.Alumno;
+using CapaEntidad.Calificaciones;
+using CapaDatos.Calificaciones;
 namespace CapaLogica.Becas
 {
     public class CL_BecaHijoTrabajador
@@ -21,12 +24,25 @@ namespace CapaLogica.Becas
                 
         #endregion
         #region metodos
-
-        public E_Alumno retornarAlumno(String DNI)
+            
+        public bool beca_hijo_trabajador(E_Alumno ea)
         {
-            E_Alumno a = new E_Alumno();
-            a = CD_BecaHijoTrabajador.Instancia.Mostrar(DNI);
-            return a;
+            bool validar = false;
+            if(CD_Alumno.Instancia.validar_dni(ea.Alumn_dni))
+            {
+                if(CD_BecaHijoTrabajador.Instancia.Validar_hijo_docente(ea.Alumn_dni))
+                {
+                    E_Calificaciones aux = CD_Calificacines.Instancia.mostrar_calificaciones(ea.Alumn_dni);
+                    if(aux != null)
+                    {
+                        if(aux.Califi_Promedio>=13)
+                        {
+                            if (CD_BecaHijoTrabajador.Instancia.modificar_pension(ea.Alumn_dni)) validar = true;
+                        }
+                    }
+                }
+            }
+            return validar;
         }
 
         #endregion metodos

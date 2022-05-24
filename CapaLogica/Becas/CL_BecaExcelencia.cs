@@ -9,7 +9,7 @@ using CapaDatos.Becas;
 using CapaDatos.Calificaciones;
 namespace CapaLogica.Becas
 {
-    internal class CL_BecaExcelencia
+    public class CL_BecaExcelencia
     {
 
         #region Singleton
@@ -33,7 +33,7 @@ namespace CapaLogica.Becas
                 calificaciones = CD_Calificacines.Instancia.mostrar_calificaciones(ea.Alumn_dni);
                 if(calificaciones.Califi_Promedio>=16)
                 {
-                    if(CD_BecaExcelencia.Instancia.modificar_pension_aluno(ea.Alumn_dni))
+                    if(CD_BecaExcelencia.Instancia.modificar_pension_alumno(ea.Alumn_dni))
                          verificado = true;
                 }
             }

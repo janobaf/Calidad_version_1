@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaDatos.Becas;
+using CapaDatos.Alumnos;
 using CapaDatos.Inscripcion;
 using CapaDatos.Calificaciones;
 using CapaEntidad.Alumno;
@@ -25,9 +26,7 @@ namespace CapaLogica.Becas
         #region metodos
         public  bool existencia_persona(string dni)
         {
-            if(D_Crear_Inscripcion.Instancia.validar_dni(dni))
-                return true; 
-            return false;
+            return CD_Alumno.Instancia.validar_dni(dni) ? true : false;
         }
         public bool beca_hermano(E_Alumno ea)
         {

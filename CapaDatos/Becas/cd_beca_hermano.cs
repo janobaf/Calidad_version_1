@@ -21,51 +21,85 @@ namespace CapaDatos.Becas
 
         #endregion
         #region metodos
+        // !funcion privada para poder enlazar una tabla con otra 
+        // @param dni ingresa el dni para validar 
+        // ? El dni deve de tener 8 digitos y deve de ser numerico
         private void enlazar_Becas(string dni)
         {
+            // !Se crea una variable tipo commandsql y se inicializa en null
+
             SqlCommand cmd = null;
 
             try
             {
+                /*!
+                      * Se llama a la Conexion dentro de CapaDatos 
+                      *La clase Conexion nos devuelve una instancia y se guarda en la variable  cn
+                     */
                 SqlConnection cn = Conexion.Instancia.Conectar();
+                // @param sql  de tipo string guarda la consulta que se quiera hacer al sql
                 string sql = "update Alumno a , Alum_Beca ab set a.Alumn_BecaSeleccionada='BecaHermano' and ab.Alum_ID=a.Alum_ID  where a.Alumn_DNI =";
+                // @param sql+ se le agrega al final de la cadena una variable dni
                 sql += dni;
                 cmd = new SqlCommand(sql, cn);
-                cmd.CommandType = CommandType.StoredProcedure;
+                //!Abre la conexion
                 cn.Open();
+                //!Se ejecuta la consulta
                 cmd.ExecuteNonQuery();
 
             }
             catch (Exception e) { throw e; }
-            finally { cmd.Connection.Close(); }
+            finally { cmd.Connection.Close(); } // !Cierra la conexion
         }
-        public E_Alumno Mostrar(string DNI)
+
+        //!Funcion para mostrar un alumno especifico 
+        //@param  DNI se pasa el dni 
+        //?EL dni deve de tener 8 digitos y deve de ser numerico 
+        //@param return retorna un alumno
+        private E_Alumno Mostrar(string DNI)
         {
+            //!Se crea una class auxiliar de la CLASEENTIDAD.Alumno
             E_Alumno alumno = new E_Alumno();
+            // !Se crea una variable tipo commandsql y se inicializa en null
             SqlCommand cmd = null;
             try
             {
+                /*!
+                      * Se llama a la Conexion dentro de CapaDatos 
+                      *La clase Conexion nos devuelve una instancia y se guarda en la variable  cn
+                     */
                 SqlConnection cn = Conexion.Instancia.Conectar();
+                // @param sql  de tipo string guarda la consulta que se quiera hacer al sql
                 string sql = "select Alumn_ApellidoPaterno , Alumn_ApellidoMaterno from Alumnos where Alumn_DNI=";
+                // @param sql+ se le agrega al final de la cadena una variable dni
                 sql += DNI;
                 cmd = new SqlCommand(sql, cn);
-                cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
+
+                //!Ejecuta la consulta
                 SqlDataReader dr = cmd.ExecuteReader();
+                //!Se lee los datos obtenidos de la consulta
+
                 while (dr.Read())
                 {
+                    //!Se pasa cada variable obtenida y se guarda en una variable dependiente de la clase alumno
                     alumno.Alumn_ApellidoPaterno = dr["Alumn_ApellidoPaterno"].ToString();
                     alumno.Alumn_ApellidoMaterno = dr["Alumn_ApellidoMaterno"].ToString();
                
                 }
+                //!Se llama a la funcion  y se pasa el parametro DNI
                 this.enlazar_Becas(DNI);
             }
             catch (Exception e) { throw e; }
-            finally { cmd.Connection.Close(); }
-            if (alumno != null)
-                return alumno;
-            return null;
+            finally { cmd.Connection.Close(); } //!Finaliza la conexion
+          // ! Condiciona que el alumno no este vacio si esta vacio retorna null si no retorna  el alumno
+
+            return alumno !=null? alumno:null;
         }
+
+        //!Funcion donde permite modificar el alumno dependiendo del dni
+        // @param Dni parametro que recibe la funcion 
+        // ?El dni deve ser un string deve de tener 8 digitos y deve de ser numerico
         public bool modificar_alumno(string dni)
         {
 
@@ -77,7 +111,6 @@ namespace CapaDatos.Becas
                 string sql = "update Alumno set Alumno_Pension=Alumno_Pension -(Alumno_Pension *0.25) where Alumn_DNI =";
                 sql += dni;
                 cmd = new SqlCommand(sql, cn);
-                cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0) { validar= true; }

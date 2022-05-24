@@ -10,16 +10,19 @@ namespace CapaLogica.Pagos
 {
     public class L_Pagos
     {
-        public float pagos(int nota, float pension)
-        {
-            float pago_pension = 0;
+        #region Singleton
 
-            if (nota >=16)
-            {
-                pago_pension = (float)(pension * 0.5);
-            }
-            return pago_pension;
+        private static readonly L_Pagos _instancia = new L_Pagos();
+
+        public static L_Pagos Instancia
+        {
+            get { return L_Pagos._instancia; }
         }
+
+        #endregion
+        #region metodos
+       
+       
         public bool pago_pension(E_Alumno ea)
         {
             bool validar = false;
@@ -43,8 +46,7 @@ namespace CapaLogica.Pagos
                 alumno = CD_Pagos.Instancia.mostrar_alumnos("TRUE");
 
             }
-            if (alumno != null) return alumno;
-            return null;
+            return alumno.Count > 0 ? alumno : null;
         }
         public List<E_Alumno> mostrar_alumnos_NOpagaron()
         {
@@ -54,8 +56,9 @@ namespace CapaLogica.Pagos
                 alumno = CD_Pagos.Instancia.mostrar_alumnos("true");
 
             }
-            if (alumno != null) return alumno;
-            return null;
+            return alumno.Count > 0 ? alumno : null;
+
         }
+        #endregion metodos
     }
 }

@@ -1,0 +1,13 @@
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\bin\Release\CapaLogica.dll
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\bin\Release\CapaLogica.pdb
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\bin\Release\CapaDatos.dll
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\bin\Release\CapaEntidad.dll
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\bin\Release\CapaDatos.pdb
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\bin\Release\CapaEntidad.pdb
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\obj\Release\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\obj\Release\CapaLogica.Properties.Resources.resources
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\obj\Release\CapaLogica.csproj.GenerateResource.cache
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\obj\Release\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\obj\Release\CapaLogica.csproj.CopyComplete
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\obj\Release\CapaLogica.dll
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\obj\Release\CapaLogica.pdb

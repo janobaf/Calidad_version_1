@@ -18,15 +18,50 @@ namespace CapaLogica
         }
         #endregion
         #region metodos
+        private bool verificaciones_datos (E_Alumno ea)
+        {
+            int aux;
+            bool validar = false;
+            bool resultado = Int32.TryParse(ea.Alumn_dni, out aux);
+            if (resultado && ea.Alumn_dni.Length == 8)
+            {
+                if (ea.Alum_Telefono.Length == 9)
+                {
+                    string correo = ea.Alum_Correo;
+                    int posicion = 0;
+                    int posicion_final = 0;
+                    bool auxiliar = false;
+                    if (!correo[0].Equals("@"))
+                    {
+                        for (int i = 0; i < correo.Length; i++)
+                        {
+                            if (correo[i].ToString().Equals("@"))
+                            {
+                                posicion = i;
+                            }
+                            if (correo[i].ToString().Equals(".")) posicion_final = i;
+                        }
+                        string auxi = "";
+                        for (int i = posicion+1; i < posicion_final; i++) auxi += correo[i];
+                        Console.Write(auxi);
+                        if (auxi.Equals("hotmail") || auxi.Equals("gmail")) auxiliar = true;
+                        if (auxiliar == true) validar= true;
+                    }
 
+
+                }
+
+            }
+
+            return validar; 
+        }
         public bool crear_alumno(E_Alumno ea )
         {
-
-            if (CD_Alumno.Instancia.validar_dni(ea.Alumn_dni)==false)
-                if(D_Crear_Inscripcion.Instancia.Crear_Alumnos_Inscripcion(ea))
-                    return true;
-
-            
+            ea.Alum_ID = 8;
+            if (verificaciones_datos(ea))
+                if (CD_Alumno.Instancia.validar_dni(ea.Alumn_dni) == false)
+                    if (D_Crear_Inscripcion.Instancia.Crear_Alumnos_Inscripcion(ea))
+                        return true;
 
              return false;
 
@@ -44,10 +79,13 @@ namespace CapaLogica
         {
             List<E_Alumno> lista = new List<E_Alumno>(); ;
             lista = D_Crear_Inscripcion.Instancia.Listar_alumnos_Inscripcion();
-            return lista;
+            return lista.Count > 0 ? lista : null;
 
         }
         #endregion metodos
 
+        /*
+         *      if null retorna  null si no retorna lista 
+         * */
     }
 }

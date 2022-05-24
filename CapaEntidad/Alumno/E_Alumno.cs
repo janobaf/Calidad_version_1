@@ -21,9 +21,11 @@ namespace CapaEntidad.Alumno
        public string Alumn_ApoderadoApellido { get; set; }
        public string Alumn_ApoderadoMaterno { get; set; }
        public string Alumn_Estado { get; set; }
-       public string Alumn_Grado { get; set; }
        public string Alumn_BecaSeleccionada { get; set; }
        public float Alumn_Pension { get; set; }
+       public string Alum_Correo { get; set; }
+       
+       public string Alum_Telefono { get; set; }  
 
     }
 }

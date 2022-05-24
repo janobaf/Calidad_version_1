@@ -22,33 +22,47 @@ namespace CapaDatos.Calificaciones
 
          public E_Calificaciones mostrar_calificaciones(string dni )
         {
-            E_Calificaciones aux  = new E_Calificaciones(); 
+            E_Calificaciones aux  = new E_Calificaciones();
 
+            // !se declara null el sqlcomand 
 
             SqlCommand cmd = null;
-            SqlConnection cn = Conexion.Instancia.Conectar();
-            string Consulta_sql = "select c.* from Calificaciones c inner join Alumno a on a.Alumn_ID = c.Califi_id where a.Alumn_DNI=";
-            Consulta_sql += dni;
-            cmd = new SqlCommand(Consulta_sql, cn);
-
-            cn.Open();
-            SqlDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
+            try
             {
-                aux.Califi_ID = Convert.ToInt32(dr["Califi_ID"].ToString());
-                aux.Califi_Promedio = float.Parse(dr["Califi_Promedio"].ToString());
-                aux.Curso_id = int.Parse(dr["Curso_id"].ToString());
-                aux.Califi_Parcial1 = float.Parse(dr["Califi_Parcial1"].ToString());
-                aux.Califi_Final = float.Parse(dr["Califi_Final"].ToString());
-                aux.Califi_Trabajos = float.Parse(dr["Califi_Trabajos"].ToString());
-                aux.Califi_Parcial2 = float.Parse(dr["Califi_Parcial2"].ToString()) ;
-            }
-            cmd.Connection.Close();
-           
-            if (aux != null)
-                return aux;
+                //!Se llama a la Conexion dentro de CapaDatos 
+                //!La clase Conexion nos devuelve una instancia y se guarda en la variable cn
 
-            return null;
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                // @param sql  de tipo string guarda la consulta que se quiera hacer al sql
+
+                string Consulta_sql = "select c.* from Calificaciones c inner join Alumno a on a.Alum_ID = c.Califi_id where a.Alum_DNI=";
+                Consulta_sql += dni;
+                cmd = new SqlCommand(Consulta_sql, cn);
+                // ! Se abre la conexion
+
+                cn.Open();
+                // !Se ejecuta la consulta 
+
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    aux.Califi_ID = Convert.ToInt32(dr["Califi_ID"].ToString());
+                    aux.Califi_Promedio = float.Parse(dr["Califi_Promedio"].ToString());
+                    aux.Curso_id = int.Parse(dr["Curso_id"].ToString());
+                    aux.Califi_Parcial1 = float.Parse(dr["Califi_Parcial1"].ToString());
+                    aux.Califi_Final = float.Parse(dr["Califi_Final"].ToString());
+                    aux.Califi_Trabajos = float.Parse(dr["Califi_Trabajos"].ToString());
+                    aux.Califi_Parcial2 = float.Parse(dr["Califi_Parcial2"].ToString());
+                }
+            }
+            catch (Exception e) { throw e; }
+            finally
+            {
+                cmd.Connection.Close();
+
+            }
+
+            return aux != null ? aux : null;
 
         }
 

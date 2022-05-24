@@ -45,7 +45,6 @@ namespace CapaDatos.Becas
                 alumno.Alumn_ApoderadoApellido = dr["Alum_ApoderadoApePaterno"].ToString();
                 alumno.Alumn_ApoderadoMaterno = dr["Alum_ApoderadoApeMaterno"].ToString();
                 alumno.Alumn_Estado = dr["Alumn_Estado"].ToString();
-                alumno.Alumn_Grado = dr["Alumn_Grado"].ToString();
             }
             cmd.Connection.Close();
             return alumno;
