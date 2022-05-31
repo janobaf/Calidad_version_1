@@ -28,4 +28,6 @@ namespace CapaEntidad.Alumno
        public string Alum_Telefono { get; set; }  
 
     }
+
+
 }

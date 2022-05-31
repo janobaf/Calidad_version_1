@@ -57,7 +57,7 @@ namespace CapaLogica
         }
         public bool crear_alumno(E_Alumno ea )
         {
-            ea.Alum_ID = 8;
+            ea.Alum_ID = CD_Alumno.Instancia.id_automatico();
             if (verificaciones_datos(ea))
                 if (CD_Alumno.Instancia.validar_dni(ea.Alumn_dni) == false)
                     if (D_Crear_Inscripcion.Instancia.Crear_Alumnos_Inscripcion(ea))
@@ -74,6 +74,13 @@ namespace CapaLogica
                     return true;
 
             return false;
+        }
+        public E_Alumno listar_alumno_dni(string dni)
+        {
+           E_Alumno aux = new E_Alumno();
+            if (D_Crear_Inscripcion.Instancia.Listar_alumnos_DNI(dni) != null)
+                aux = D_Crear_Inscripcion.Instancia.Listar_alumnos_DNI(dni);
+            return aux !=null ? aux : null;
         }
         public List<E_Alumno> listar_alumnos()
         {

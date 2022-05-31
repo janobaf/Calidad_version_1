@@ -28,9 +28,9 @@ namespace CapaLogica.Becas
         {
             bool verificado = false;
             E_Calificaciones calificaciones = new E_Calificaciones();
-            if(CD_Calificacines.Instancia.mostrar_calificaciones(ea.Alumn_dni) !=null)
+            if(CD_Calificacines.Instancia.mostrar_calificaciones_dni(ea.Alumn_dni) !=null)
             {
-                calificaciones = CD_Calificacines.Instancia.mostrar_calificaciones(ea.Alumn_dni);
+                calificaciones = CD_Calificacines.Instancia.mostrar_calificaciones_dni(ea.Alumn_dni);
                 if(calificaciones.Califi_Promedio>=16)
                 {
                     if(CD_BecaExcelencia.Instancia.modificar_pension_alumno(ea.Alumn_dni))

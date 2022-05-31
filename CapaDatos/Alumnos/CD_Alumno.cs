@@ -19,7 +19,7 @@ namespace CapaDatos.Alumnos
         #endregion
         #region metodos
         
-
+        
         // !Funcion donde validamos la existencia de un dni en la tabla Alumno dentro del sql
         // @Param dni pasamos de tipo Dni
         // ?El dni deve de contener solo 8 digitos y deve de contener solo numeros 
@@ -219,14 +219,14 @@ namespace CapaDatos.Alumnos
             return null;
         }
 
-        public int id_automatico(string dni)
+        public int id_automatico()
         {
             int id = 0;
             //!Llama a la funcion validar 
             //@param dni se pasa el parametro a la funcion
             //!devuelve true o false 
-            if (this.validar_dni(dni))
-            {
+           
+            
                 /*!
                     * si es verdadero el alumno 
                     * Se crea una variable auxiliar de tipo E_alumno
@@ -243,9 +243,8 @@ namespace CapaDatos.Alumnos
                         */
                     SqlConnection cn = Conexion.Instancia.Conectar();
                     // @param sql  de tipo string guarda la consulta que se quiera hacer al sql
-                    string sql = "select Max(Alum_id) from Alumno where Alum_DNI=";
+                    string sql = "select Max(Alum_ID) Alum_ID from Alumno ";
                     // @param sql+ se le agrega al final de la cadena una variable dni
-                    sql += dni;
 
                     cmd = new SqlCommand(sql, cn);
                     //!Se abre la conexion
@@ -258,16 +257,17 @@ namespace CapaDatos.Alumnos
                     while (dr.Read())
                     {
                         //!Se pasa cada variable obtenida y se guarda en una variable dependiente de la clase alumno
-                        id= Convert.ToInt32(dr["ID"].ToString());
+                        id= Convert.ToInt32(dr["Alum_ID"].ToString());
+                        break;
                     }
                 }
                 catch (Exception e) { throw e; }
                 finally { cmd.Connection.Close(); } //!Finaliza la conexion
 
                 // ! Condiciona que el alumno no este vacio si esta vacio retorna null si no retorna  el alumno
-            }
+            
             //!Si es falso retorna null
-            return id>0? id:0;
+            return id>0? id+1:0;
         }
             #endregion metodos
      }

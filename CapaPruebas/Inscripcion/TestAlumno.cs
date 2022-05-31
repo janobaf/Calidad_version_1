@@ -9,6 +9,10 @@ namespace CapaPruebas.Alumnos
     [TestClass]
     public class TestAlumno
     {
+
+
+
+
         
         private E_Alumno _alumno()
         {
@@ -27,17 +31,18 @@ namespace CapaPruebas.Alumnos
             aux.Alumn_ApoderadoNombre = "Mirta";
             aux.Alumn_ApoderadoApellido = "Ezperansa";
             aux.Alumn_ApoderadoMaterno = "Flores";
-            aux.Alum_Correo = "@juan21.hotmail_com ";
+            aux.Alum_Correo = "juan21@hotmail.com ";
             aux.Alum_Telefono = "965589456";
             return aux;
         
         }
+        
         [TestMethod]
         public void Test_creacion_inscripcion()
         {
             E_Alumno ea = this._alumno();
 
-            bool respuesta_esperada = false;
+            bool respuesta_esperada = true;
             bool respuesta_obtenida = L_Alumno.Instancia.crear_alumno(ea);
             Assert.AreEqual(respuesta_esperada, respuesta_obtenida);
 
@@ -79,7 +84,7 @@ namespace CapaPruebas.Alumnos
         }
 
         */
-        
+
 
         // TODO : Despues de creacion 
         /*

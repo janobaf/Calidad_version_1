@@ -29,6 +29,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -50,9 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Inscripcion\TestAlumno.cs" />
-    <Compile Include="Becas\TestBecas_Hermano.cs" />
     <Compile Include="Becas\TestBecas_Hexelencia.cs" />
-    <Compile Include="marco\testMethod.cs" />
     <Compile Include="Pagos\pagos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

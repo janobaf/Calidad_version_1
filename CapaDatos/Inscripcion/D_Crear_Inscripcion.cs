@@ -94,14 +94,59 @@ namespace CapaDatos.Inscripcion
         {
             List<E_Alumno> aux = new List<E_Alumno>();
             SqlCommand cmd = null;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("select * from Alumno", cn);
+
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    E_Alumno alumno = new E_Alumno();
+                    alumno.Alumn_nombre = dr["Alum_Nombre"].ToString();
+                    alumno.Alumn_ApellidoPaterno = dr["Alum_ApellidoPaterno"].ToString();
+                    alumno.Alumn_ApellidoMaterno = dr["Alum_ApellidoMaterno"].ToString();
+                    alumno.Alumn_Direccion = dr["Alum_Direccion"].ToString();
+                    alumno.Alumn_Fechnaci = DateTime.Parse(dr["Alum_FechNaci"].ToString());
+                    alumno.Alumn_Tipo = dr["Alum_Tipo"].ToString();
+                    alumno.Alumn_fechInscripcion = DateTime.Parse(dr["Alum_FechInscripcion"].ToString());
+                    alumno.Alumn_dni = dr["Alum_dni"].ToString();
+                    alumno.Alumn_ApoderadoNombre = dr["Alum_ApoderadoNombre"].ToString();
+                    alumno.Alumn_ApoderadoApellido = dr["Alum_ApoderadoApePaterno"].ToString();
+                    alumno.Alumn_ApoderadoMaterno = dr["Alum_ApoderadoApeMaterno"].ToString();
+                    alumno.Alumn_Estado = dr["Alum_Estado"].ToString();
+                    alumno.Alum_Correo = dr["Alum_Correo"].ToString();
+                    alumno.Alum_Telefono = dr["Alum_Telefono"].ToString();
+                    aux.Add(alumno);
+
+
+                }
+            }
+            catch(Exception e) { throw e; }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+
+
+            return aux !=null ? aux:null;
+        }
+
+
+        public E_Alumno Listar_alumnos_DNI( string dni)
+        {
+            E_Alumno alumno = new E_Alumno();
+            SqlCommand cmd = null;
             SqlConnection cn = Conexion.Instancia.Conectar();
-            cmd = new SqlCommand("select * from Alumno" , cn);
-           
+            string sql = "select* from Alumno where Alum_DNI =";
+            sql += dni;
+            cmd = new SqlCommand(sql, cn);
+
             cn.Open();
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                E_Alumno alumno = new E_Alumno();
                 alumno.Alumn_nombre = dr["Alum_Nombre"].ToString();
                 alumno.Alumn_ApellidoPaterno = dr["Alum_ApellidoPaterno"].ToString();
                 alumno.Alumn_ApellidoMaterno = dr["Alum_ApellidoMaterno"].ToString();
@@ -116,13 +161,12 @@ namespace CapaDatos.Inscripcion
                 alumno.Alumn_Estado = dr["Alum_Estado"].ToString();
                 alumno.Alum_Correo = dr["Alum_Correo"].ToString();
                 alumno.Alum_Telefono = dr["Alum_Telefono"].ToString();
-                aux.Add(alumno);
 
 
             }
             cmd.Connection.Close();
 
-            return aux !=null ? aux:null;
+            return alumno != null ? alumno : null;
         }
         #endregion metodos
     }
