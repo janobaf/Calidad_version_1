@@ -20,3 +20,9 @@ C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.Pagos.Emitir_Matricula_Ventana.resources
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.ListarAlumnos.resources
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.Registro_Alumno.resources
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.Inscripcion.Modificar_Alumno.resources
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.InterfacesGraficas.Listar_Calificaciones.resources
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.Calificaciones.Modificar_Calificaciones.resources
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.InterfacesGraficas.Registro_Calificaciones.resources
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.InterfacesGraficas.Listar_Curso.resources
+C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.InterfacesGraficas.Registro_Curso.resources

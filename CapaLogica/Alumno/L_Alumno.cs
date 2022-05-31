@@ -68,10 +68,8 @@ namespace CapaLogica
         }
         public bool modificar_alumno(E_Alumno ea)
         {
-
-            if (CD_Alumno.Instancia.validar_dni(ea.Alumn_dni))
-                if(D_Crear_Inscripcion.Instancia.Modificar_Alumnos_Inscripcion(ea))
-                    return true;
+            if (D_Crear_Inscripcion.Instancia.Modificar_Alumnos_Inscripcion(ea))
+                return true;
 
             return false;
         }

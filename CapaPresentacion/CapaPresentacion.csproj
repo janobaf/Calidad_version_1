@@ -72,43 +72,97 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Becas_Por_Exelencia.cs">
+    <Compile Include="Alumnos\Modificar_Alumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Becas_Por_Exelencia.Designer.cs">
+    <Compile Include="Alumnos\Modificar_Alumno.designer.cs">
+      <DependentUpon>Modificar_Alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="becas\Becas_Por_Exelencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="becas\Becas_Por_Exelencia.Designer.cs">
       <DependentUpon>Becas_Por_Exelencia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Emitir_Matricula_Ventana.cs">
+    <Compile Include="Alumnos\Emitir_Matricula_Ventana.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Emitir_Matricula_Ventana.Designer.cs">
+    <Compile Include="Alumnos\Emitir_Matricula_Ventana.Designer.cs">
       <DependentUpon>Emitir_Matricula_Ventana.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListarAlumnos.cs">
+    <Compile Include="Alumnos\ListarAlumnos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListarAlumnos.Designer.cs">
+    <Compile Include="Alumnos\ListarAlumnos.Designer.cs">
       <DependentUpon>ListarAlumnos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registro Alumno.cs">
+    <Compile Include="Alumnos\Registro Alumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registro Alumno.Designer.cs">
+    <Compile Include="Alumnos\Registro Alumno.Designer.cs">
       <DependentUpon>Registro Alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calificaciones\Listar Calificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calificaciones\Listar Calificaciones.Designer.cs">
+      <DependentUpon>Listar Calificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calificaciones\Modificar_Calificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calificaciones\Modificar_Calificaciones.Designer.cs">
+      <DependentUpon>Modificar_Calificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calificaciones\Registro Calificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calificaciones\Registro Calificaciones.Designer.cs">
+      <DependentUpon>Registro Calificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curso\Listar Curso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Curso\Listar Curso.Designer.cs">
+      <DependentUpon>Listar Curso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curso\Registro Curso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Curso\Registro Curso.Designer.cs">
+      <DependentUpon>Registro Curso.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Becas_Por_Exelencia.resx">
+    <EmbeddedResource Include="Alumnos\Modificar_Alumno.resx">
+      <DependentUpon>Modificar_Alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="becas\Becas_Por_Exelencia.resx">
       <DependentUpon>Becas_Por_Exelencia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Emitir_Matricula_Ventana.resx">
+    <EmbeddedResource Include="Alumnos\Emitir_Matricula_Ventana.resx">
       <DependentUpon>Emitir_Matricula_Ventana.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListarAlumnos.resx">
+    <EmbeddedResource Include="Alumnos\ListarAlumnos.resx">
       <DependentUpon>ListarAlumnos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registro Alumno.resx">
+    <EmbeddedResource Include="Alumnos\Registro Alumno.resx">
       <DependentUpon>Registro Alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calificaciones\Listar Calificaciones.resx">
+      <DependentUpon>Listar Calificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calificaciones\Modificar_Calificaciones.resx">
+      <DependentUpon>Modificar_Calificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calificaciones\Registro Calificaciones.resx">
+      <DependentUpon>Registro Calificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curso\Listar Curso.resx">
+      <DependentUpon>Listar Curso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curso\Registro Curso.resx">
+      <DependentUpon>Registro Curso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

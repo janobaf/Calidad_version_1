@@ -10,11 +10,7 @@ namespace CapaDatos.Alumnos
 {
     public class CD_Curso
     {
-        /* TODO : CAPA DATOS CURSO
-         *  @PARAM DEFECTO : E_Curso
-         *  1 PASO : CREAR CURSO   
-         *  
-         */
+        
         #region Singleton
         private static readonly CD_Curso _instancia = new CD_Curso();
         public static CD_Curso Instancia
@@ -31,18 +27,13 @@ namespace CapaDatos.Alumnos
             bool validar = false;
             try
             {
-                //!Se llama a la Conexion dentro de CapaDatos 
-                //!La clase Conexion nos devuelve una instancia y se guarda en la variable cn
-
+              
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                // @param sql  de tipo string guarda la consulta que se quiera hacer al sql
 
                 string Consulta_sql = "select max(Curso_ID) Curso_ID from Curso ";
                 cmd = new SqlCommand(Consulta_sql, cn);
-                // ! Se abre la conexion
 
                 cn.Open();
-                // !Se ejecuta la consulta 
 
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
@@ -85,7 +76,7 @@ namespace CapaDatos.Alumnos
             finally{ cmd.Connection.Close(); }
             return validar;
         }
-
+       
         public List <E_Curso> listar_cursos()
         {
             List<E_Curso> listar_c = new List<E_Curso>();
@@ -118,6 +109,25 @@ namespace CapaDatos.Alumnos
             }
             return listar_c != null ? listar_c : null;
         }
-        #endregion metodos
+        public bool Enalazar_Curso_Alumno(string dni , int Curso_ID)
+        {
+            bool validar = false;
+            SqlCommand cmd = null;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                string consulta_sql = "update c set c.Alum_ID = a.Alum_ID  from Alumno a ,Curso c where a.Alum_DNI=" + dni + " and c.Curso_ID =";
+                consulta_sql += Curso_ID;
+                cmd = new SqlCommand(consulta_sql, cn);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0) validar = true;
+
+            }
+            catch (Exception e) { throw e; }
+            finally { cmd.Connection.Close(); }
+            return validar;
+        } 
+            #endregion metodos
     }
 }

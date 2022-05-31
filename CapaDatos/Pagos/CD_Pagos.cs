@@ -47,9 +47,11 @@ namespace CapaDatos.Pagos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                string sql = "select * from Alumno where Alum_Estado=";
-                sql += "'" + tipo + "'";
-                cmd = new SqlCommand(sql, cn);
+                
+                cmd = new SqlCommand("mostrar_Alumnos_Pension", cn);
+                cmd.Parameters.AddWithValue("@tipo", tipo);
+                cmd.CommandType = CommandType.StoredProcedure;
+
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
@@ -62,10 +64,11 @@ namespace CapaDatos.Pagos
                     alumno.Alumn_Fechnaci = DateTime.Parse(dr["Alum_FechNaci"].ToString());
                     alumno.Alumn_Tipo = dr["Alum_Tipo"].ToString();
                     alumno.Alumn_fechInscripcion = DateTime.Parse(dr["Alum_FechInscripcion"].ToString());
-                    alumno.Alumn_dni = dr["Alum_dni"].ToString();
+                    alumno.Alumn_dni = dr["Alum_DNI"].ToString();
                     alumno.Alumn_ApoderadoNombre = dr["Alum_ApoderadoNombre"].ToString();
                     alumno.Alumn_ApoderadoApellido = dr["Alum_ApoderadoApePaterno"].ToString();
                     alumno.Alumn_ApoderadoMaterno = dr["Alum_ApoderadoApeMaterno"].ToString();
+                    alumno.Alumn_Pension = float.Parse(dr["Alum_Pension"].ToString());
                     alumno.Alumn_Estado = dr["Alum_Estado"].ToString();
                     alumno.Alum_Correo = dr["Alum_Correo"].ToString();
                     alumno.Alum_Telefono = dr["Alum_Telefono"].ToString();

@@ -34,6 +34,7 @@ namespace CapaPresentacion
             string aux = DNItextBox1.Text;
             if (aux != " " )
             {
+                dataGridView1.Rows.Clear();
                 E_Alumno alumno = new E_Alumno();
                 if (L_Alumno.Instancia.listar_alumno_dni(aux) != null)
                     alumno = L_Alumno.Instancia.listar_alumno_dni(aux);

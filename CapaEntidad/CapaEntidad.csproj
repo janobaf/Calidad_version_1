@@ -47,8 +47,6 @@
     <Compile Include="Becas\E_BecaPorPromedio.cs" />
     <Compile Include="Calificaciones\E_Calificaciones.cs" />
     <Compile Include="Curso\E_Curso.cs" />
-    <Compile Include="Horario\E_Horario.cs" />
-    <Compile Include="Profesor\E_Profesor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

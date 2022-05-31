@@ -53,7 +53,7 @@ namespace CapaLogica.Pagos
             List<E_Alumno> alumno = new List<E_Alumno>();
             if (CD_Pagos.Instancia.mostrar_alumnos("FALSE") != null)
             {
-                alumno = CD_Pagos.Instancia.mostrar_alumnos("true");
+                alumno = CD_Pagos.Instancia.mostrar_alumnos("FALSE");
 
             }
             return alumno.Count > 0 ? alumno : null;

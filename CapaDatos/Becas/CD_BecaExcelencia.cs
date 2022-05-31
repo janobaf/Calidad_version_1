@@ -26,6 +26,84 @@ namespace CapaDatos.Becas
         //!Funcion para modificar la pension del alumno de la beca por excelencia 
         //@param dni de tipo string recibida por la funcion
         // ?El dnni deve de ser string con unos 8 digitos y deve ser numerico
+        private int id_automatico()
+        {
+            // !se declara null el sqlcomand 
+            int id = 0;
+            bool validar = false;
+            SqlCommand cmd = null;
+            try
+            {
+                //!Se llama a la Conexion dentro de CapaDatos 
+                //!La clase Conexion nos devuelve una instancia y se guarda en la variable cn
+
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                // @param sql  de tipo string guarda la consulta que se quiera hacer al sql
+
+                string Consulta_sql = "select max(BecaPorPromedio_id) BecaPorPromedio_id from BecaPorPromedio ";
+                cmd = new SqlCommand(Consulta_sql, cn);
+                // ! Se abre la conexion
+
+                cn.Open();
+                // !Se ejecuta la consulta 
+
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    if (dr["BecaPorPromedio_id"].ToString() != "") validar = true;
+                    if (validar == true) id = int.Parse(dr["BecaPorPromedio_id"].ToString());
+                    break;
+                }
+            }
+            catch (Exception f) { throw f; }
+            finally
+            {
+                cmd.Connection.Close();
+
+            }
+            return validar == true ? id + 1 : -1;
+        }
+
+        private E_Alumno Beca_por_promedio(string dni)
+        {
+            E_Alumno alumno = new E_Alumno();
+            SqlCommand cmd = null;
+            try
+            {
+                //!Se llama a la Conexion dentro de CapaDatos 
+                //!La clase Conexion nos devuelve una instancia y se guarda en la variable cn
+
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                // @param sql  de tipo string guarda la consulta que se quiera hacer al sql
+
+                string Consulta_sql = "select Alum_Nombre,Alum_ApellidoPaterno,Alum_ApellidoMaterno from Alumno where Alum_DNI =";
+                Consulta_sql += dni;
+                cmd = new SqlCommand(Consulta_sql, cn);
+                // ! Se abre la conexion
+
+                cn.Open();
+                // !Se ejecuta la consulta 
+
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    alumno.Alumn_nombre = dr["Alum_Nombre"].ToString();
+                    alumno.Alumn_ApellidoPaterno = dr["Alum_ApellidoPaterno"].ToString();
+                    alumno.Alumn_ApellidoMaterno = dr["Alum_ApellidoMaterno"].ToString();
+
+                    break;
+                }
+            }
+            catch (Exception f) { throw f; }
+            finally
+            {
+                cmd.Connection.Close();
+
+            }
+
+            return alumno != null ? alumno : null;
+
+        }
         private void enlazar_beca(string dni)
         {
 
@@ -39,17 +117,28 @@ namespace CapaDatos.Becas
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 // @param sql  de tipo string guarda la consulta que se quiera hacer al sql
 
-                string sql = "update Alumno set Nombre_beca=";
-                sql += "Exelencia";
-                sql+=" where Alumn_DNI =";
-                sql += dni;
-                cmd = new SqlCommand(sql, cn);
-                // ! Se abre la conexion
 
-                cn.Open();
-                // !Se ejecuta la consulta 
-                int i = cmd.ExecuteNonQuery();
-                //!Si se ejecuto con exito deve de devolver una valor entero mayor a 0
+                int id = this.id_automatico();
+                if (id != -1)
+                {
+                    E_Alumno alumno = this.Beca_por_promedio(dni);
+                    if(alumno != null )
+                    {
+                        string consulta_sql = "insert into BecaPorPromedio values (";
+                        consulta_sql += id.ToString() + ",";
+                        consulta_sql += alumno.Alumn_nombre + ",";
+                        consulta_sql += alumno.Alumn_ApellidoPaterno + ",";
+                        consulta_sql += alumno.Alumn_ApellidoMaterno + ")";
+                        cmd = new SqlCommand(consulta_sql, cn);
+                        // ! Se abre la conexion
+
+                        cn.Open();
+                        // !Se ejecuta la consulta 
+                        cmd.ExecuteNonQuery();
+                    }
+                   
+                }
+
             }
             catch (Exception e) { throw e; }
             finally { cmd.Connection.Close(); } //!Cerramos la conexion
@@ -95,7 +184,12 @@ namespace CapaDatos.Becas
             }
             //!Retornar el resultado final
             return validar;
-        }
+
+
+    
+        }       
+     
+        
         #endregion metodos
     }
 }

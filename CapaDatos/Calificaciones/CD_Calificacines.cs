@@ -71,7 +71,24 @@ namespace CapaDatos.Calificaciones
             return validar == true ? id + 1 : -1;
         }
 
-
+        private void enlazar_curso(string dni,int id)
+        {
+            SqlCommand cmd = null;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                string consulta_sql = "update Curso set Califi_ID=";
+                consulta_sql += id.ToString();
+                consulta_sql += "from Alumno a inner join Curso c on a.Alum_ID = c.Alum_ID";
+                consulta_sql += "where a.Alum_DNI =";
+                consulta_sql += dni;
+                cmd = new SqlCommand(consulta_sql, cn);
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e) { throw e; }
+            finally{cmd.Connection.Close(); }
+        }
         public bool crear_calificaciones(string dni, E_Calificaciones e)
         {
 
@@ -96,7 +113,12 @@ namespace CapaDatos.Calificaciones
 
                     cn.Open();
                     int i = cmd.ExecuteNonQuery();
-                    if (i > 0) validar = true;
+                    if (i > 0)
+                    {
+                        validar = true;
+                        this.enlazar_curso(dni, e.Califi_ID);
+                    }
+
                 }
 
             }

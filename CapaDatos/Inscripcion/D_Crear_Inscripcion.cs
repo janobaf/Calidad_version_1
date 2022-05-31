@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,23 +28,17 @@ namespace CapaDatos.Inscripcion
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("Alumno_Editar", cn);
+
+             
+                cmd = new SqlCommand("Modificar_Alumnos_Inscripcion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@N_Alum_ID", ea.Alum_ID);
-                cmd.Parameters.AddWithValue("@Alum_Nombre", ea.Alumn_nombre);
-                cmd.Parameters.AddWithValue("@Alum_ApellidoPaterno", ea.Alumn_ApellidoPaterno);
-                cmd.Parameters.AddWithValue("@Alum_ApellidoMaterno", ea.Alumn_ApellidoMaterno);
-                cmd.Parameters.AddWithValue("@Alum_Direccion", ea.Alumn_Direccion);
-                cmd.Parameters.AddWithValue("@Alum_FechNaci", ea.Alumn_Fechnaci);
-                cmd.Parameters.AddWithValue("@Alum_Tipo", ea.Alumn_Tipo);
-                cmd.Parameters.AddWithValue("@@Alum_FechInscripcion", ea.Alumn_fechInscripcion);
-                cmd.Parameters.AddWithValue("@Alum_DNI", ea.Alumn_dni);
-                cmd.Parameters.AddWithValue("@Alum_ApoderadoNombre", ea.Alumn_ApoderadoNombre);
-                cmd.Parameters.AddWithValue("@Alum_ApoderadoApePaterno", ea.Alumn_ApoderadoApellido);
-                cmd.Parameters.AddWithValue("@Alum_ApoderadoApeMaterno", ea.Alumn_ApoderadoMaterno);
-                cmd.Parameters.AddWithValue("@Alum_Estado", ea.Alumn_Estado);
-                cmd.Parameters.AddWithValue("@Alum_Correo", ea.Alum_Correo);
-                cmd.Parameters.AddWithValue("@Alum_Telefono", ea.Alum_Telefono);
+
+                cmd.Parameters.AddWithValue("@correo", ea.Alum_Correo);
+                cmd.Parameters.AddWithValue("@Direccion", ea.Alumn_Direccion);
+                cmd.Parameters.AddWithValue("@telefono", ea.Alum_Telefono);
+                cmd.Parameters.AddWithValue("@DNI", ea.Alumn_dni);
+
+
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0) validar = true;

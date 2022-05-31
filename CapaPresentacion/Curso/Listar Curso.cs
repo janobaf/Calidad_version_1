@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion.Pagos
+namespace CapaPresentacion.InterfacesGraficas
 {
-    public partial class Emitir_Matricula_Ventana : Form
+    public partial class Listar_Curso : Form
     {
-        public Emitir_Matricula_Ventana()
+        public Listar_Curso()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
