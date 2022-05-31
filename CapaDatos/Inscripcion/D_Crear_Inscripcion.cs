@@ -37,8 +37,8 @@ namespace CapaDatos.Inscripcion
                 cmd.Parameters.AddWithValue("@Direccion", ea.Alumn_Direccion);
                 cmd.Parameters.AddWithValue("@telefono", ea.Alum_Telefono);
                 cmd.Parameters.AddWithValue("@DNI", ea.Alumn_dni);
-
-
+                
+                
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0) validar = true;

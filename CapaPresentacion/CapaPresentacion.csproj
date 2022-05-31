@@ -78,17 +78,17 @@
     <Compile Include="Alumnos\Modificar_Alumno.designer.cs">
       <DependentUpon>Modificar_Alumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Alumnos\p_inscripcionprincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumnos\p_inscripcionprincipal.designer.cs">
+      <DependentUpon>p_inscripcionprincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="becas\Becas_Por_Exelencia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="becas\Becas_Por_Exelencia.Designer.cs">
       <DependentUpon>Becas_Por_Exelencia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Alumnos\Emitir_Matricula_Ventana.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alumnos\Emitir_Matricula_Ventana.Designer.cs">
-      <DependentUpon>Emitir_Matricula_Ventana.cs</DependentUpon>
     </Compile>
     <Compile Include="Alumnos\ListarAlumnos.cs">
       <SubType>Form</SubType>
@@ -132,16 +132,22 @@
     <Compile Include="Curso\Registro Curso.Designer.cs">
       <DependentUpon>Registro Curso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Alumnos\Modificar_Alumno.resx">
       <DependentUpon>Modificar_Alumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos\p_inscripcionprincipal.resx">
+      <DependentUpon>p_inscripcionprincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="becas\Becas_Por_Exelencia.resx">
       <DependentUpon>Becas_Por_Exelencia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Alumnos\Emitir_Matricula_Ventana.resx">
-      <DependentUpon>Emitir_Matricula_Ventana.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Alumnos\ListarAlumnos.resx">
       <DependentUpon>ListarAlumnos.cs</DependentUpon>
@@ -163,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Curso\Registro Curso.resx">
       <DependentUpon>Registro Curso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
