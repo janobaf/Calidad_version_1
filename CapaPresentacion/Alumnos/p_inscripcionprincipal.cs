@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaLogica.Becas;
 namespace CapaPresentacion
 {
     public partial class p_inscripcionprincipal : Form
@@ -45,8 +46,8 @@ namespace CapaPresentacion
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Principal p = new Principal();
-            p.Show();
+            Becas_Por_Exelencia form = new Becas_Por_Exelencia();
+            form.Show();
         }
     }
 }

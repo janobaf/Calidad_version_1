@@ -53,9 +53,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(-3, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(820, 590);
+            this.pictureBox1.Size = new System.Drawing.Size(1093, 726);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -70,54 +71,71 @@
             this.AlumnoID,
             this.ProfesorID,
             this.final});
-            this.ProfesordataGridView1.Location = new System.Drawing.Point(31, 377);
+            this.ProfesordataGridView1.Location = new System.Drawing.Point(41, 464);
+            this.ProfesordataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ProfesordataGridView1.Name = "ProfesordataGridView1";
-            this.ProfesordataGridView1.Size = new System.Drawing.Size(734, 168);
+            this.ProfesordataGridView1.RowHeadersWidth = 51;
+            this.ProfesordataGridView1.Size = new System.Drawing.Size(979, 207);
             this.ProfesordataGridView1.TabIndex = 100;
             // 
             // IDProfesor
             // 
             this.IDProfesor.HeaderText = "Calificaciones ID";
+            this.IDProfesor.MinimumWidth = 6;
             this.IDProfesor.Name = "IDProfesor";
+            this.IDProfesor.Width = 125;
             // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Promedio";
+            this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 125;
             // 
             // ApellidoPa
             // 
             this.ApellidoPa.HeaderText = "Curso ID";
+            this.ApellidoPa.MinimumWidth = 6;
             this.ApellidoPa.Name = "ApellidoPa";
+            this.ApellidoPa.Width = 125;
             // 
             // ApellidoMaterno
             // 
             this.ApellidoMaterno.HeaderText = "Parcial 1";
+            this.ApellidoMaterno.MinimumWidth = 6;
             this.ApellidoMaterno.Name = "ApellidoMaterno";
+            this.ApellidoMaterno.Width = 125;
             // 
             // AlumnoID
             // 
             this.AlumnoID.HeaderText = "Parcial 2";
+            this.AlumnoID.MinimumWidth = 6;
             this.AlumnoID.Name = "AlumnoID";
+            this.AlumnoID.Width = 125;
             // 
             // ProfesorID
             // 
             this.ProfesorID.HeaderText = "Trabajos";
+            this.ProfesorID.MinimumWidth = 6;
             this.ProfesorID.Name = "ProfesorID";
+            this.ProfesorID.Width = 125;
             // 
             // final
             // 
             this.final.HeaderText = "Examen Final";
+            this.final.MinimumWidth = 6;
             this.final.Name = "final";
+            this.final.Width = 125;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label5.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(267, 24);
+            this.label5.Location = new System.Drawing.Point(356, 30);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(239, 32);
+            this.label5.Size = new System.Drawing.Size(297, 41);
             this.label5.TabIndex = 102;
             this.label5.Text = "Listar Calificaciones";
             // 
@@ -125,9 +143,10 @@
             // 
             this.Buscarbutton1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Buscarbutton1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Buscarbutton1.Location = new System.Drawing.Point(61, 226);
+            this.Buscarbutton1.Location = new System.Drawing.Point(81, 278);
+            this.Buscarbutton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Buscarbutton1.Name = "Buscarbutton1";
-            this.Buscarbutton1.Size = new System.Drawing.Size(95, 34);
+            this.Buscarbutton1.Size = new System.Drawing.Size(127, 42);
             this.Buscarbutton1.TabIndex = 113;
             this.Buscarbutton1.Text = "Buscar";
             this.Buscarbutton1.UseVisualStyleBackColor = true;
@@ -136,9 +155,10 @@
             // 
             this.Modificarbutton1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Modificarbutton1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Modificarbutton1.Location = new System.Drawing.Point(288, 226);
+            this.Modificarbutton1.Location = new System.Drawing.Point(384, 278);
+            this.Modificarbutton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Modificarbutton1.Name = "Modificarbutton1";
-            this.Modificarbutton1.Size = new System.Drawing.Size(95, 34);
+            this.Modificarbutton1.Size = new System.Drawing.Size(127, 42);
             this.Modificarbutton1.TabIndex = 114;
             this.Modificarbutton1.Text = "Modificar";
             this.Modificarbutton1.UseVisualStyleBackColor = true;
@@ -147,9 +167,10 @@
             // 
             this.Eliminarbutton2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminarbutton2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Eliminarbutton2.Location = new System.Drawing.Point(531, 226);
+            this.Eliminarbutton2.Location = new System.Drawing.Point(708, 278);
+            this.Eliminarbutton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Eliminarbutton2.Name = "Eliminarbutton2";
-            this.Eliminarbutton2.Size = new System.Drawing.Size(95, 34);
+            this.Eliminarbutton2.Size = new System.Drawing.Size(127, 42);
             this.Eliminarbutton2.TabIndex = 115;
             this.Eliminarbutton2.Text = "Eliminar";
             this.Eliminarbutton2.UseVisualStyleBackColor = true;
@@ -158,46 +179,51 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(125, 108);
+            this.label6.Location = new System.Drawing.Point(167, 133);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 21);
+            this.label6.Size = new System.Drawing.Size(157, 25);
             this.label6.TabIndex = 116;
             this.label6.Text = "Calificaciones ID:";
             // 
             // CursoIDtextBox1
             // 
-            this.CursoIDtextBox1.Location = new System.Drawing.Point(288, 109);
+            this.CursoIDtextBox1.Location = new System.Drawing.Point(384, 134);
+            this.CursoIDtextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CursoIDtextBox1.Name = "CursoIDtextBox1";
-            this.CursoIDtextBox1.Size = new System.Drawing.Size(218, 20);
+            this.CursoIDtextBox1.Size = new System.Drawing.Size(289, 22);
             this.CursoIDtextBox1.TabIndex = 117;
             // 
             // Salirbutton1
             // 
             this.Salirbutton1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Salirbutton1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Salirbutton1.Location = new System.Drawing.Point(565, 101);
+            this.Salirbutton1.Location = new System.Drawing.Point(753, 124);
+            this.Salirbutton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Salirbutton1.Name = "Salirbutton1";
-            this.Salirbutton1.Size = new System.Drawing.Size(95, 34);
+            this.Salirbutton1.Size = new System.Drawing.Size(127, 42);
             this.Salirbutton1.TabIndex = 118;
             this.Salirbutton1.Text = "Salir";
             this.Salirbutton1.UseVisualStyleBackColor = true;
+            this.Salirbutton1.Click += new System.EventHandler(this.Salirbutton1_Click);
             // 
             // Atrasbutton2
             // 
             this.Atrasbutton2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Atrasbutton2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Atrasbutton2.Location = new System.Drawing.Point(693, 101);
+            this.Atrasbutton2.Location = new System.Drawing.Point(924, 124);
+            this.Atrasbutton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Atrasbutton2.Name = "Atrasbutton2";
-            this.Atrasbutton2.Size = new System.Drawing.Size(95, 34);
+            this.Atrasbutton2.Size = new System.Drawing.Size(127, 42);
             this.Atrasbutton2.TabIndex = 119;
             this.Atrasbutton2.Text = "Atras";
             this.Atrasbutton2.UseVisualStyleBackColor = true;
             // 
             // Listar_Calificaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 583);
+            this.ClientSize = new System.Drawing.Size(1067, 718);
             this.Controls.Add(this.Atrasbutton2);
             this.Controls.Add(this.Salirbutton1);
             this.Controls.Add(this.CursoIDtextBox1);
@@ -208,6 +234,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ProfesordataGridView1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Listar_Calificaciones";
             this.Text = "Listar_Calificaciones";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

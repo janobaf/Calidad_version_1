@@ -196,24 +196,22 @@ namespace CapaDatos.Becas
 
 
 
-        public List<E_Alumn_Beca> ListaDeBeca()
+        public List<E_Alumno> ListaDeBeca()
         {
-            E_Alumn_Beca alumn = new E_Alumn_Beca();
-            List<E_Alumn_Beca> lista = new List<E_Alumn_Beca>();
+            E_Alumno alumn = new E_Alumno();
+            List<E_Alumno> lista = new List<E_Alumno>();
             SqlConnection connection = Conexion.Instancia.Conectar();
             connection.Open();
             using (SqlCommand command = connection.CreateCommand())
             {
-                command.CommandText = "SELECT id_alumno, dni_alumno, nombre_alumno, apellido_alumno, birthday_alumno, phone_alumno, email_alumno, direccion_alumno FROM alumno";
+                command.CommandText = "SELECT BecaPorPromedio_Id, BecaPorPromedio_Nombre, BecaPorPromedio_ApellidoPaterno, BecaPorPromedio_ApellidoMaterno FROM BecaPorPromedio";
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    alumn.Alumn_Beca_ID = reader.GetInt32(0);
-                    alumn.Alumn_Beca_NombreBeca = reader.GetString(1);
-                    alumn.Alumn_ID = reader.GetInt32(2);
-                    alumn.Alumn_Beca_Descripcion = reader.GetString(3);
-                    alumn.Alumn_Beca_FechBeca = reader.GetDateTime(4);
-                    alumn.Alumn_Beca_Descuento = reader.GetFloat(5);
+                    alumn.Alum_ID = reader.GetInt32(0);
+                    alumn.Alumn_nombre = reader.GetString(1);
+                    alumn.Alumn_ApellidoPaterno = reader.GetString(2);
+                    alumn.Alumn_ApellidoMaterno = reader.GetString(3);
                     lista.Add(alumn);
                 }
                 reader.Close();

@@ -16,5 +16,10 @@ namespace CapaPresentacion.InterfacesGraficas
         {
             InitializeComponent();
         }
+
+        private void Salirbutton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

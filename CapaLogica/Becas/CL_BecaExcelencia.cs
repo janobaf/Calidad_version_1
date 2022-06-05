@@ -40,6 +40,12 @@ namespace CapaLogica.Becas
             return verificado;
         }
 
+        public List<E_Alumno> ListaBecados()
+        {
+            List<E_Alumno> lista = CD_BecaExcelencia.Instancia.ListaDeBeca();
+            return lista;
+        }
+
         #endregion metodos
     }
 }

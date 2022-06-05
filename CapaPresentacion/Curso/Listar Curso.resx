@@ -135,29 +135,11 @@
   <metadata name="ProfesorID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="IDProfesor.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Nombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ApellidoPa.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ApellidoMaterno.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="AlumnoID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ProfesorID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAB9AAAAhSCAIAAACwapYUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAA/7JJREFUeF7svQeAG9d17n+BAQYdi92lZD+nv5deX5LX/kmc95LnxM9Nsq0uq3dZ
+        wAAADsABataJCQAA/7JJREFUeF7svQeAG9d17n+BAQYdi92lZD+nv5deX5LX/kmc95LnxM9Nsq0uq3dZ
         VpcsWcWWbbnLvciKq2xJVjNVSJHcwmY7ceImi9xe2dSsLpJbAOzO/957Pgzv4mDAQdvG+fkamvm+c84d
         zAyGu4fDgXAClpT5+XksGVQUCWm1FD4LKbWC5GaAihpI3tuJFd9Qln+Q5gGCNJA8QBADtm+QxoDtG6Qx
         YPtgToOVhsH0DNi+QRoDtg+qx5NbN6iycBZaltBqTSCzYVDOAwRpINUIkg2kaJ4/UEtAXU5gywxg1AVK

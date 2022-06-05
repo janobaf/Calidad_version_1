@@ -16,5 +16,10 @@ namespace CapaPresentacion.InterfacesGraficas
         {
             InitializeComponent();
         }
+
+        private void Eliminarbutton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
