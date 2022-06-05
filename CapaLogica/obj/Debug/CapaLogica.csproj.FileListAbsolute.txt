@@ -11,3 +11,16 @@ C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\obj\Debug
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\obj\Debug\CapaLogica.pdb
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\obj\Debug\CapaLogica.Properties.Resources.resources
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaLogica\obj\Debug\CapaLogica.csproj.GenerateResource.cache
+C:\Users\HOME\Source\Repos\Calidad_version_1\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\HOME\Source\Repos\Calidad_version_1\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\HOME\Source\Repos\Calidad_version_1\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\HOME\Source\Repos\Calidad_version_1\CapaLogica\bin\Debug\CapaEntidad.dll
+C:\Users\HOME\Source\Repos\Calidad_version_1\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\HOME\Source\Repos\Calidad_version_1\CapaLogica\bin\Debug\CapaEntidad.pdb
+C:\Users\HOME\Source\Repos\Calidad_version_1\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\HOME\Source\Repos\Calidad_version_1\CapaLogica\obj\Debug\CapaLogica.Properties.Resources.resources
+C:\Users\HOME\Source\Repos\Calidad_version_1\CapaLogica\obj\Debug\CapaLogica.csproj.GenerateResource.cache
+C:\Users\HOME\Source\Repos\Calidad_version_1\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\HOME\Source\Repos\Calidad_version_1\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\HOME\Source\Repos\Calidad_version_1\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\HOME\Source\Repos\Calidad_version_1\CapaLogica\obj\Debug\CapaLogica.pdb
