@@ -27,3 +27,32 @@ C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.InterfacesGraficas.Registro_Curso.resources
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.p_inscripcionprincipal.resources
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.Principal.resources
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\bin\Debug\CapaEntidad.dll
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\bin\Debug\CapaLogica.dll
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\bin\Debug\CapaEntidad.pdb
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\bin\Debug\CapaLogica.pdb
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.Inscripcion.Modificar_Alumno.resources
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.p_inscripcionprincipal.resources
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.Becas_Por_Exelencia.resources
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.ListarAlumnos.resources
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.Registro_Alumno.resources
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.InterfacesGraficas.Listar_Calificaciones.resources
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.Calificaciones.Modificar_Calificaciones.resources
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.InterfacesGraficas.Registro_Calificaciones.resources
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.InterfacesGraficas.Listar_Curso.resources
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.InterfacesGraficas.Registro_Curso.resources
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.Principal.resources
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.pdb

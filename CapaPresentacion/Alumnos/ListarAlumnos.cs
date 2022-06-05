@@ -17,6 +17,7 @@ namespace CapaPresentacion
         public ListarAlumnos()
         {
             InitializeComponent();
+            dataGridView1.DataSource = L_Alumno.Instancia.listar_alumnos();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

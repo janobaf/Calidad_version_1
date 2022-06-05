@@ -24,6 +24,7 @@ namespace CapaPresentacion.Inscripcion
             alumno = L_Alumno.Instancia.listar_alumno_dni(dni_txt.Text);
             if (alumno != null)
                 Alumn_nombre.Text = alumno.Alumn_nombre;
+            MessageBox.Show("entre");
         }
 
         private void iconButton2_Click(object sender, EventArgs e)

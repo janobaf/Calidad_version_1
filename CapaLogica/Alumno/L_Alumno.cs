@@ -57,21 +57,22 @@ namespace CapaLogica
         }
         public bool crear_alumno(E_Alumno ea )
         {
-            ea.Alum_ID = CD_Alumno.Instancia.id_automatico();
-            if (verificaciones_datos(ea))
-                if (CD_Alumno.Instancia.validar_dni(ea.Alumn_dni) == false)
-                    if (D_Crear_Inscripcion.Instancia.Crear_Alumnos_Inscripcion(ea))
-                        return true;
+            //ea.Alum_ID = CD_Alumno.Instancia.id_automatico();
+            //if (verificaciones_datos(ea))
+            //    if (CD_Alumno.Instancia.validar_dni(ea.Alumn_dni) == false)
+            //        if (D_Crear_Inscripcion.Instancia.Crear_Alumnos_Inscripcion(ea))
+            //            return true;
 
-             return false;
+            D_Crear_Inscripcion.Instancia.Crear_Alumnos_Inscripcion(ea);
+             return true;
 
         }
         public bool modificar_alumno(E_Alumno ea)
         {
-            if (D_Crear_Inscripcion.Instancia.Modificar_Alumnos_Inscripcion(ea))
-                return true;
-
-            return false;
+            //if (D_Crear_Inscripcion.Instancia.Modificar_Alumnos_Inscripcion(ea))
+            //    return true;
+            D_Crear_Inscripcion.Instancia.Modificar_Alumnos_Inscripcion(ea);
+            return true;
         }
         public E_Alumno listar_alumno_dni(string dni)
         {

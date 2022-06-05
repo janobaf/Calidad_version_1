@@ -4,3 +4,9 @@ C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaEntidad\obj\Debu
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\artur\Documents\Calidad\grupo1_v1\CapaPresentacion\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaEntidad\obj\Debug\CapaEntidad.pdb

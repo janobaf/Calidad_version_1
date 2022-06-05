@@ -69,7 +69,7 @@ namespace CapaPresentacion
             }
             else
                 MessageBox.Show("FALTAN DATOS","ERROR");
-
+        MessageBox.Show("entre");
         }
     }
 }
