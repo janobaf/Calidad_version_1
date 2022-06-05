@@ -56,3 +56,4 @@ C:\Users\HOME\Source\Repos\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPres
 C:\Users\HOME\Source\Repos\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\HOME\Source\Repos\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\Users\HOME\Source\Repos\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\HOME\Source\Repos\Calidad_version_1\CapaPresentacion\obj\Debug\CapaPresentacion.becas.ListaAlumnosBecados.resources
