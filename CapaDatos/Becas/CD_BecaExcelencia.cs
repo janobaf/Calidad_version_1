@@ -198,7 +198,7 @@ namespace CapaDatos.Becas
 
         public List<E_ListadoBecados> ListaDeBeca()
         {
-            E_ListadoBecados alumn = new E_ListadoBecados();
+           
             List<E_ListadoBecados> lista = new List<E_ListadoBecados>();
             SqlConnection connection = Conexion.Instancia.Conectar();
             connection.Open();
@@ -208,6 +208,7 @@ namespace CapaDatos.Becas
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
+                    E_ListadoBecados alumn = new E_ListadoBecados();
                     alumn.BecaPorPromedio_Id = reader.GetInt32(0);
                     alumn.BecaPorPromedio_Nombre = reader.GetString(1);
                     alumn.BecaPorPromedio_ApellidoPaterno = reader.GetString(2);
