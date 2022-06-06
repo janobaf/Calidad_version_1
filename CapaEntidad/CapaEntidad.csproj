@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Alumno\E_Alumn_Beca.cs" />
     <Compile Include="Alumno\E_Alumno.cs" />
+    <Compile Include="Alumno\E_ListadoBecados.cs" />
     <Compile Include="Becas\E_BecaPorPromedio.cs" />
     <Compile Include="Calificaciones\E_Calificaciones.cs" />
     <Compile Include="Curso\E_Curso.cs" />

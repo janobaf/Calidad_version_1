@@ -196,10 +196,10 @@ namespace CapaDatos.Becas
 
 
 
-        public List<E_Alumno> ListaDeBeca()
+        public List<E_ListadoBecados> ListaDeBeca()
         {
-            E_Alumno alumn = new E_Alumno();
-            List<E_Alumno> lista = new List<E_Alumno>();
+            E_ListadoBecados alumn = new E_ListadoBecados();
+            List<E_ListadoBecados> lista = new List<E_ListadoBecados>();
             SqlConnection connection = Conexion.Instancia.Conectar();
             connection.Open();
             using (SqlCommand command = connection.CreateCommand())
@@ -208,10 +208,10 @@ namespace CapaDatos.Becas
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    alumn.Alum_ID = reader.GetInt32(0);
-                    alumn.Alumn_nombre = reader.GetString(1);
-                    alumn.Alumn_ApellidoPaterno = reader.GetString(2);
-                    alumn.Alumn_ApellidoMaterno = reader.GetString(3);
+                    alumn.BecaPorPromedio_Id = reader.GetInt32(0);
+                    alumn.BecaPorPromedio_Nombre = reader.GetString(1);
+                    alumn.BecaPorPromedio_ApellidoPaterno = reader.GetString(2);
+                    alumn.BecaPorPromedio_ApellidoMaterno = reader.GetString(3);
                     lista.Add(alumn);
                 }
                 reader.Close();

@@ -23,5 +23,12 @@ namespace CapaPresentacion
             p_inscripcionprincipal p_Inscripcionprincipal = new p_inscripcionprincipal();
             p_Inscripcionprincipal.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Becas_Por_Exelencia p_Inscripcionprincipal = new Becas_Por_Exelencia();
+            p_Inscripcionprincipal.Show();
+        }
     }
 }

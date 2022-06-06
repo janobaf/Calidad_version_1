@@ -46,7 +46,7 @@ namespace CapaPresentacion
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Becas_Por_Exelencia form = new Becas_Por_Exelencia();
+            Principal form = new Principal();
             form.Show();
         }
     }

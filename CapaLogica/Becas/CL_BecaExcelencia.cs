@@ -40,9 +40,9 @@ namespace CapaLogica.Becas
             return verificado;
         }
 
-        public List<E_Alumno> ListaBecados()
+        public List<E_ListadoBecados> ListaBecados()
         {
-            List<E_Alumno> lista = CD_BecaExcelencia.Instancia.ListaDeBeca();
+            List<E_ListadoBecados> lista = CD_BecaExcelencia.Instancia.ListaDeBeca();
             return lista;
         }
 

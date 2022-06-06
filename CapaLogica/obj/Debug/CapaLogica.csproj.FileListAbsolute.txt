@@ -24,3 +24,16 @@ C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaLogica\obj\Debug\
 C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
 C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaLogica\obj\Debug\CapaLogica.dll
 C:\Users\$uicideBoy$\Desktop\rama master\Calidad_version_1\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\HOME\Desktop\Proyecto-Calidad\Calidad_version_1\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\HOME\Desktop\Proyecto-Calidad\Calidad_version_1\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\HOME\Desktop\Proyecto-Calidad\Calidad_version_1\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\HOME\Desktop\Proyecto-Calidad\Calidad_version_1\CapaLogica\bin\Debug\CapaEntidad.dll
+C:\Users\HOME\Desktop\Proyecto-Calidad\Calidad_version_1\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\HOME\Desktop\Proyecto-Calidad\Calidad_version_1\CapaLogica\bin\Debug\CapaEntidad.pdb
+C:\Users\HOME\Desktop\Proyecto-Calidad\Calidad_version_1\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\HOME\Desktop\Proyecto-Calidad\Calidad_version_1\CapaLogica\obj\Debug\CapaLogica.Properties.Resources.resources
+C:\Users\HOME\Desktop\Proyecto-Calidad\Calidad_version_1\CapaLogica\obj\Debug\CapaLogica.csproj.GenerateResource.cache
+C:\Users\HOME\Desktop\Proyecto-Calidad\Calidad_version_1\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\HOME\Desktop\Proyecto-Calidad\Calidad_version_1\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\HOME\Desktop\Proyecto-Calidad\Calidad_version_1\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\HOME\Desktop\Proyecto-Calidad\Calidad_version_1\CapaLogica\obj\Debug\CapaLogica.pdb
