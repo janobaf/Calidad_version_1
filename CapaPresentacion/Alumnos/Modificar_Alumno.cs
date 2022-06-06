@@ -35,5 +35,12 @@ namespace CapaPresentacion.Inscripcion
             else
                 MessageBox.Show("Incorrecto");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            p_inscripcionprincipal principal = new p_inscripcionprincipal();
+            principal.Show();
+        }
     }
 }

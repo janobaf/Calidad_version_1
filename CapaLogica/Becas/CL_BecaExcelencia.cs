@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaEntidad.Alumno;
 using CapaEntidad.Calificaciones;
+using CapaDatos.Alumnos;
 using CapaDatos.Becas;
 using CapaDatos.Calificaciones;
 namespace CapaLogica.Becas
@@ -39,7 +40,14 @@ namespace CapaLogica.Becas
             }
             return verificado;
         }
-
+        public E_Alumno Mostrar_Alumno_Exelencia(string dni)
+        {
+            E_Alumno aux = new E_Alumno();
+            if (CD_Alumno.Instancia.validar_dni(dni))
+                if (CD_BecaExcelencia.Instancia.Obtener_Alumno_Exelencia(dni) != null)
+                    aux = CD_BecaExcelencia.Instancia.Obtener_Alumno_Exelencia(dni);
+            return aux != null ? aux : null;
+        }
         #endregion metodos
     }
 }

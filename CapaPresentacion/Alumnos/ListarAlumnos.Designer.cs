@@ -32,7 +32,6 @@
             this.Titulolabel6 = new System.Windows.Forms.Label();
             this.Buscarbutton1 = new System.Windows.Forms.Button();
             this.Atrasbutton1 = new System.Windows.Forms.Button();
-            this.Salitbutton1 = new System.Windows.Forms.Button();
             this.DNItextBox1 = new System.Windows.Forms.TextBox();
             this.dni = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -74,23 +73,13 @@
             // 
             this.Atrasbutton1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Atrasbutton1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Atrasbutton1.Location = new System.Drawing.Point(93, 217);
+            this.Atrasbutton1.Location = new System.Drawing.Point(289, 232);
             this.Atrasbutton1.Name = "Atrasbutton1";
             this.Atrasbutton1.Size = new System.Drawing.Size(111, 44);
             this.Atrasbutton1.TabIndex = 56;
             this.Atrasbutton1.Text = "Atras";
             this.Atrasbutton1.UseVisualStyleBackColor = true;
-            // 
-            // Salitbutton1
-            // 
-            this.Salitbutton1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Salitbutton1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Salitbutton1.Location = new System.Drawing.Point(626, 217);
-            this.Salitbutton1.Name = "Salitbutton1";
-            this.Salitbutton1.Size = new System.Drawing.Size(112, 44);
-            this.Salitbutton1.TabIndex = 55;
-            this.Salitbutton1.Text = "Salir";
-            this.Salitbutton1.UseVisualStyleBackColor = true;
+            this.Atrasbutton1.Click += new System.EventHandler(this.Atrasbutton1_Click);
             // 
             // DNItextBox1
             // 
@@ -180,7 +169,6 @@
             this.Controls.Add(this.Titulolabel6);
             this.Controls.Add(this.Buscarbutton1);
             this.Controls.Add(this.Atrasbutton1);
-            this.Controls.Add(this.Salitbutton1);
             this.Controls.Add(this.DNItextBox1);
             this.Controls.Add(this.dni);
             this.Controls.Add(this.dataGridView1);
@@ -199,7 +187,6 @@
         private System.Windows.Forms.Label Titulolabel6;
         private System.Windows.Forms.Button Buscarbutton1;
         private System.Windows.Forms.Button Atrasbutton1;
-        private System.Windows.Forms.Button Salitbutton1;
         private System.Windows.Forms.TextBox DNItextBox1;
         private System.Windows.Forms.Label dni;
         private System.Windows.Forms.DataGridView dataGridView1;

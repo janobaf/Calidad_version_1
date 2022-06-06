@@ -47,6 +47,13 @@ namespace CapaPresentacion
                 }
             }
         }
+
+        private void Atrasbutton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            p_inscripcionprincipal p_Inscripcionprincipal = new p_inscripcionprincipal();
+            p_Inscripcionprincipal.Show();
+        }
     }
 }
 

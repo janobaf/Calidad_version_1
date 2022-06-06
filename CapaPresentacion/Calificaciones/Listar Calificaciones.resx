@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABkAAAAakCAIAAAAju0BkAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAA/7JJREFUeF7snQWcHceV9b377YaMYma2ZEriGGXhMAtGNILRgJiZWbLFzJKFFhjC
+        wQAADsEBuJFr7QAA/7JJREFUeF7snQWcHceV9b377YaMYma2ZEriGGXhMAtGNILRgJiZWbLFzJKFFhjC
         sBve4GYDG/YmcRKjNEyPqb9/9+0pt9/Isi1rRjOjOr9S69atW9BQ552u6dfvDqO+IhKJhEIhv9/v8Xjc
         brfttfwKtquuULPHcDjMIIEqwsApfrbiFFAUDAbZI5+FQCBAli2REkBRRUWF7KwUqUirExMSiQdgUKWy
         stJZ5PV6q6qq8EsWUEQjLgsYKlJDQ+NjgrnGhGVaMWGd/CAkAGqSRgOFMJudsYAHMoFq4BzbpaGhUZ+g
@@ -21029,9 +21029,6 @@
     <value>True</value>
   </metadata>
   <metadata name="Nombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="ApellidoPa.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="ApellidoMaterno.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

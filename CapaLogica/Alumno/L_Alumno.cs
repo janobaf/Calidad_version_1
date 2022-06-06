@@ -43,7 +43,6 @@ namespace CapaLogica
                         }
                         string auxi = "";
                         for (int i = posicion+1; i < posicion_final; i++) auxi += correo[i];
-                        Console.Write(auxi);
                         if (auxi.Equals("hotmail") || auxi.Equals("gmail")) auxiliar = true;
                         if (auxiliar == true) validar= true;
                     }

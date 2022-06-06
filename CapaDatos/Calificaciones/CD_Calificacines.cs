@@ -77,12 +77,11 @@ namespace CapaDatos.Calificaciones
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                string consulta_sql = "update Curso set Califi_ID=";
-                consulta_sql += id.ToString();
-                consulta_sql += "from Alumno a inner join Curso c on a.Alum_ID = c.Alum_ID";
-                consulta_sql += "where a.Alum_DNI =";
-                consulta_sql += dni;
-                cmd = new SqlCommand(consulta_sql, cn);
+                cmd = new SqlCommand("Enlazar_Curso", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@dni", dni);
+                cmd.Parameters.AddWithValue("@id", id);
+
                 cn.Open();
                 cmd.ExecuteNonQuery();
             }
@@ -103,7 +102,6 @@ namespace CapaDatos.Calificaciones
                     SqlConnection cn = Conexion.Instancia.Conectar();
                     cmd = new SqlCommand("Crear_Calificaciones", cn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Curso_ID", e.Curso_id);
                     cmd.Parameters.AddWithValue("@Califi_ID", e.Califi_ID);
                     cmd.Parameters.AddWithValue("@Califi_Parcial1", e.Califi_Parcial1);
                     cmd.Parameters.AddWithValue("@Califi_Parcial2", e.Califi_Parcial2);
@@ -140,7 +138,7 @@ namespace CapaDatos.Calificaciones
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 // @param sql  de tipo string guarda la consulta que se quiera hacer al sql
 
-                string Consulta_sql = "select ca.Califi_Promedio,ca.Califi_Parcial1,ca.Califi_Parcial2,ca.Califi_Final,ca.Califi_Trabajos from Alumno a inner join Curso c on c.Alum_ID = a.Alum_ID inner join Calificaciones ca on ca.Curso_ID = c.Curso_ID where a.Alum_DNI =";
+                string Consulta_sql = "select ca.Califi_Promedio,ca.Califi_Parcial1,ca.Califi_Parcial2,ca.Califi_Final,ca.Califi_Trabajos from Alumno a inner join Curso c on c.Alum_ID = a.Alum_ID inner join Calificaciones ca on ca.Califi_ID = c.Califi_ID where a.Alum_DNI =";
                 Consulta_sql += dni;
                 cmd = new SqlCommand(Consulta_sql, cn);
                 // ! Se abre la conexion

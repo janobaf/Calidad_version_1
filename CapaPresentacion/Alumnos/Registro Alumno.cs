@@ -71,5 +71,12 @@ namespace CapaPresentacion
                 MessageBox.Show("FALTAN DATOS","ERROR");
 
         }
+
+        private void Salitbutton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            p_inscripcionprincipal p_Inscripcionprincipal = new p_inscripcionprincipal();
+            p_Inscripcionprincipal.Show();
+        }
     }
 }

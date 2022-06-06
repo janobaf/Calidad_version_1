@@ -76,6 +76,7 @@
             this.iconButton3.Text = "LISTAR INSCRIPCION POR DNI ";
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // panel1
             // 

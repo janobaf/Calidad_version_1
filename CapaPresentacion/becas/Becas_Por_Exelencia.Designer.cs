@@ -60,6 +60,7 @@
             this.Buscarbutton1.TabIndex = 43;
             this.Buscarbutton1.Text = "Buscar";
             this.Buscarbutton1.UseVisualStyleBackColor = true;
+            this.Buscarbutton1.Click += new System.EventHandler(this.Buscarbutton1_Click);
             // 
             // Salitbutton1
             // 

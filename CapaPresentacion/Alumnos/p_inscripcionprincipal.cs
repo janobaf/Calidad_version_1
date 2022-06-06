@@ -34,19 +34,20 @@ namespace CapaPresentacion
             modificar.Show();
         }
 
-        private void panelFormularios_Paint(object sender, PaintEventArgs e)
-        {
-            this.Hide();
-            ListarAlumnos listar = new ListarAlumnos();
-            listar.Show();
-
-        }
+    
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             Principal p = new Principal();
             p.Show();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ListarAlumnos listar = new ListarAlumnos();
+            listar.Show();
         }
     }
 }

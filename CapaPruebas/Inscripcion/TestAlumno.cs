@@ -16,8 +16,8 @@ namespace CapaPruebas.Alumnos
         {
             E_Alumno aux = new E_Alumno();
 
-            aux.Alumn_dni = "14532145";
-            aux.Alumn_Tipo = "Secundaria";
+            aux.Alumn_dni = "12341234";
+            aux.Alumn_Tipo = "Primaria";
             aux.Alumn_Direccion = "av pablo casalz mc prima lote 2";
             aux.Alumn_Estado = "true";
  

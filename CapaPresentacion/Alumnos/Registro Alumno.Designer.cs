@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro_Alumno));
             this.Salitbutton1 = new System.Windows.Forms.Button();
-            this.Continuarbutton1 = new System.Windows.Forms.Button();
             this.TelefonotextBox1 = new System.Windows.Forms.TextBox();
             this.tefelofolabel6 = new System.Windows.Forms.Label();
             this.Titulolabel6 = new System.Windows.Forms.Label();
@@ -68,24 +67,13 @@
             // 
             this.Salitbutton1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Salitbutton1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Salitbutton1.Location = new System.Drawing.Point(504, 653);
+            this.Salitbutton1.Location = new System.Drawing.Point(274, 639);
             this.Salitbutton1.Name = "Salitbutton1";
             this.Salitbutton1.Size = new System.Drawing.Size(112, 44);
             this.Salitbutton1.TabIndex = 58;
             this.Salitbutton1.Text = "Salir";
             this.Salitbutton1.UseVisualStyleBackColor = true;
-            // 
-            // Continuarbutton1
-            // 
-            this.Continuarbutton1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Continuarbutton1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Continuarbutton1.Location = new System.Drawing.Point(97, 640);
-            this.Continuarbutton1.Name = "Continuarbutton1";
-            this.Continuarbutton1.Size = new System.Drawing.Size(111, 44);
-            this.Continuarbutton1.TabIndex = 57;
-            this.Continuarbutton1.Text = "Continuar";
-            this.Continuarbutton1.UseVisualStyleBackColor = true;
-            this.Continuarbutton1.Click += new System.EventHandler(this.Continuarbutton1_Click);
+            this.Salitbutton1.Click += new System.EventHandler(this.Salitbutton1_Click);
             // 
             // TelefonotextBox1
             // 
@@ -356,7 +344,6 @@
             this.Controls.Add(this.Fecha_inscripcion);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Salitbutton1);
-            this.Controls.Add(this.Continuarbutton1);
             this.Controls.Add(this.TelefonotextBox1);
             this.Controls.Add(this.tefelofolabel6);
             this.Controls.Add(this.Titulolabel6);
@@ -394,7 +381,6 @@
         #endregion
 
         private System.Windows.Forms.Button Salitbutton1;
-        private System.Windows.Forms.Button Continuarbutton1;
         private System.Windows.Forms.TextBox TelefonotextBox1;
         private System.Windows.Forms.Label tefelofolabel6;
         private System.Windows.Forms.Label Titulolabel6;

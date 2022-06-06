@@ -124,11 +124,14 @@ namespace CapaDatos.Becas
                     E_Alumno alumno = this.Beca_por_promedio(dni);
                     if(alumno != null )
                     {
-                        string consulta_sql = "insert into BecaPorPromedio values (";
-                        consulta_sql += id.ToString() + ",";
-                        consulta_sql += alumno.Alumn_nombre + ",";
-                        consulta_sql += alumno.Alumn_ApellidoPaterno + ",";
-                        consulta_sql += alumno.Alumn_ApellidoMaterno + ")";
+                        string consulta_sql = "SET IDENTITY_INSERT BecaPorPromedio on;";
+                        consulta_sql += "insert into BecaPorPromedio (BecaPorPromedio_id,BecaPorPromedio_Nombre,BecaPorPromedio_ApellidoPaterno,BecaPorPromedio_ApellidoMaterno) values (";
+                        consulta_sql += id + ",";
+                        consulta_sql += "'"+alumno.Alumn_nombre + "',";
+                        consulta_sql += "'"+alumno.Alumn_ApellidoPaterno + "', ";
+                        consulta_sql += "'"+ alumno.Alumn_ApellidoMaterno + "' )";
+                        consulta_sql += "SET IDENTITY_INSERT BecaPorPromedio Off;";
+
                         cmd = new SqlCommand(consulta_sql, cn);
                         // ! Se abre la conexion
 
@@ -158,19 +161,20 @@ namespace CapaDatos.Becas
              * La funcion nos retorna si es true o false
              * Si es true entra en el if
             */
-            if (CD_Alumno.Instancia.validar_dni(dni))
-            {
+            
                 try
                 {
                     //!Se llama a la Conexion dentro de CapaDatos 
                     //!La clase Conexion nos devuelve una instancia y se guarda en la variable cn
 
                     SqlConnection cn = Conexion.Instancia.Conectar();
-                    // @param sql  de tipo string guarda la consulta que se quiera hacer al sql
+                // @param sql  de tipo string guarda la consulta que se quiera hacer al sql
 
-                    string sql = "update Alumno set Alumno_Pension=Alumno_Pension -(Alumno_Pension *0.5) where Alumn_DNI =";
+                string sql = "SET IDENTITY_INSERT Alumno ON;";
+                    sql +="update Alumno set Alum_Pension=Alum_Pension -(Alum_Pension *0.6) where Alum_DNI =";
                     sql += dni;
-                    cmd = new SqlCommand(sql, cn);
+                sql += "SET IDENTITY_INSERT Alumno Off;";
+                cmd = new SqlCommand(sql, cn);
                     // ! Se abre la conexion
 
                     cn.Open();
@@ -181,15 +185,45 @@ namespace CapaDatos.Becas
                 }
                 catch (Exception e) { throw e; }
                 finally { cmd.Connection.Close(); } //!Cerramos la conexion
-            }
+            
             //!Retornar el resultado final
             return validar;
 
 
     
-        }       
-     
-        
+        }
+
+
+        public E_Alumno Obtener_Alumno_Exelencia(string dni)
+        {
+            SqlCommand cmd = null;
+            E_Alumno aux = new E_Alumno();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                string sql_consulta = "select b.BecaPorPromedio_Nombre, b.BecaPorPromedio_ApellidoPaterno, b.BecaPorPromedio_ApellidoMaterno from Alumno a inner join BecaPorPromedio b on a.BeccaPorPromedio_id=b.BecaPorPromedio_id";
+                sql_consulta += "where a.Alum_DNI=" + dni + ";";
+                cmd = new SqlCommand(sql_consulta, cn);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    if (dr["b.BecaPorPromedio_Nombre"].ToString() != " " && dr["b.BecaPorPromedio_ApellidoPaterno"].ToString() != " " && dr["b.BecaPorPromedio_ApellidoMaterno"].ToString() != " ")
+                    {
+                        aux.Alumn_nombre = dr["b.BecaPorPromedio_Nombre"].ToString();
+                        aux.Alumn_ApellidoPaterno = dr["b.BecaPorPromedio_ApellidoPaterno"].ToString();
+                        aux.Alumn_ApellidoMaterno = dr["b.BecaPorPromedio_ApellidoMaterno"].ToString();
+                        break;
+                    }
+                }
+            }
+            catch (Exception e) { throw e; }
+            finally { cmd.Connection.Close(); }
+            return aux != null ? aux : null;
+
+        }
+
+
         #endregion metodos
     }
 }

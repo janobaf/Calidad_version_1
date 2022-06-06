@@ -29,15 +29,16 @@ namespace CapaDatos.Inscripcion
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
 
-             
-                cmd = new SqlCommand("Modificar_Alumnos_Inscripcion", cn);
-                cmd.CommandType = CommandType.StoredProcedure;
+                string sql_update = "SET IDENTITY_INSERT BecaPorPromedio on;";
+                sql_update+="update Alumno set Alum_Correo='"+ea.Alum_Correo+"',";
+                sql_update += "Alum_Direccion = '" + ea.Alumn_Direccion + "',";
+                sql_update += "Alum_Telefono = '" + ea.Alum_Telefono + "',";
+                sql_update += "Alum_Tipo = '" + ea.Alumn_Tipo + "'";
+                sql_update += "where Alum_DNI =" +ea.Alumn_dni;
+                sql_update += "SET IDENTITY_INSERT BecaPorPromedio Off;";
 
-                cmd.Parameters.AddWithValue("@correo", ea.Alum_Correo);
-                cmd.Parameters.AddWithValue("@Direccion", ea.Alumn_Direccion);
-                cmd.Parameters.AddWithValue("@telefono", ea.Alum_Telefono);
-                cmd.Parameters.AddWithValue("@DNI", ea.Alumn_dni);
-                
+
+                cmd = new SqlCommand(sql_update, cn);
                 
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
