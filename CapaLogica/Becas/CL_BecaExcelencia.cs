@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaEntidad.Alumno;
 using CapaEntidad.Calificaciones;
+using CapaEntidad.Becas;
 using CapaDatos.Alumnos;
 using CapaDatos.Becas;
 using CapaDatos.Calificaciones;
@@ -40,6 +41,12 @@ namespace CapaLogica.Becas
             }
             return verificado;
         }
+
+        public List<E_BecaPorPromedio> ListarBecas()
+        {
+            return CD_BecaExcelencia.Instancia.ListaDeBeca() != null ? CD_BecaExcelencia.Instancia.ListaDeBeca() : null;
+        }
+
         public E_Alumno Mostrar_Alumno_Exelencia(string dni)
         {
             E_Alumno aux = new E_Alumno();

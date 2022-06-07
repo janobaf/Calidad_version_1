@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaEntidad.Alumno;
+using CapaEntidad.Becas;
 using CapaDatos.Alumnos;
 using System.Data;
 using System.Data.SqlClient;
@@ -223,6 +224,30 @@ namespace CapaDatos.Becas
 
         }
 
+        public List<E_BecaPorPromedio> ListaDeBeca()
+        {
+
+            List<E_BecaPorPromedio> lista = new List<E_BecaPorPromedio>();
+            SqlConnection connection = Conexion.Instancia.Conectar();
+            connection.Open();
+            using (SqlCommand command = connection.CreateCommand())
+            {
+                command.CommandText = "SELECT BecaPorPromedio_Id, BecaPorPromedio_Nombre, BecaPorPromedio_ApellidoPaterno, BecaPorPromedio_ApellidoMaterno FROM BecaPorPromedio";
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    E_BecaPorPromedio alumn = new E_BecaPorPromedio();
+                    alumn.BecaPorPromedio_id = reader.GetInt32(0);
+                    alumn.BecaPorPromedioNombre = reader.GetString(1);
+                    alumn.BecaPorPromedioApellido_Paterno = reader.GetString(2);
+                    alumn.BecaPorPromedioApellido_Materno = reader.GetString(3);
+                    lista.Add(alumn);
+                }
+                reader.Close();
+            }
+            return lista !=null ? lista:null;
+
+        }
 
         #endregion metodos
     }

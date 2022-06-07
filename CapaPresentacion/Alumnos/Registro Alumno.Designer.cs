@@ -60,6 +60,8 @@
             this.Fecha_inscripcion = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.Tipo_txt = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +69,7 @@
             // 
             this.Salitbutton1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Salitbutton1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Salitbutton1.Location = new System.Drawing.Point(274, 639);
+            this.Salitbutton1.Location = new System.Drawing.Point(131, 637);
             this.Salitbutton1.Name = "Salitbutton1";
             this.Salitbutton1.Size = new System.Drawing.Size(112, 44);
             this.Salitbutton1.TabIndex = 58;
@@ -139,28 +141,28 @@
             // 
             // DNItextBox1
             // 
-            this.DNItextBox1.Location = new System.Drawing.Point(137, 289);
+            this.DNItextBox1.Location = new System.Drawing.Point(193, 52);
             this.DNItextBox1.Name = "DNItextBox1";
             this.DNItextBox1.Size = new System.Drawing.Size(397, 20);
             this.DNItextBox1.TabIndex = 47;
             // 
             // fechaNacidateTimePicker1
             // 
-            this.fechaNacidateTimePicker1.Location = new System.Drawing.Point(257, 251);
+            this.fechaNacidateTimePicker1.Location = new System.Drawing.Point(257, 291);
             this.fechaNacidateTimePicker1.Name = "fechaNacidateTimePicker1";
             this.fechaNacidateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.fechaNacidateTimePicker1.TabIndex = 46;
             // 
             // DirecciontextBox1
             // 
-            this.DirecciontextBox1.Location = new System.Drawing.Point(175, 210);
+            this.DirecciontextBox1.Location = new System.Drawing.Point(208, 248);
             this.DirecciontextBox1.Name = "DirecciontextBox1";
             this.DirecciontextBox1.Size = new System.Drawing.Size(359, 20);
             this.DirecciontextBox1.TabIndex = 45;
             // 
             // ApeMaternotextBox1
             // 
-            this.ApeMaternotextBox1.Location = new System.Drawing.Point(230, 167);
+            this.ApeMaternotextBox1.Location = new System.Drawing.Point(225, 210);
             this.ApeMaternotextBox1.Name = "ApeMaternotextBox1";
             this.ApeMaternotextBox1.Size = new System.Drawing.Size(304, 20);
             this.ApeMaternotextBox1.TabIndex = 44;
@@ -174,7 +176,7 @@
             // 
             // NombretextBox1
             // 
-            this.NombretextBox1.Location = new System.Drawing.Point(168, 84);
+            this.NombretextBox1.Location = new System.Drawing.Point(208, 84);
             this.NombretextBox1.Name = "NombretextBox1";
             this.NombretextBox1.Size = new System.Drawing.Size(366, 20);
             this.NombretextBox1.TabIndex = 42;
@@ -233,7 +235,7 @@
             // 
             this.dni.AutoSize = true;
             this.dni.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dni.Location = new System.Drawing.Point(91, 288);
+            this.dni.Location = new System.Drawing.Point(103, 52);
             this.dni.Name = "dni";
             this.dni.Size = new System.Drawing.Size(40, 21);
             this.dni.TabIndex = 35;
@@ -243,7 +245,7 @@
             // 
             this.fechana.AutoSize = true;
             this.fechana.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechana.Location = new System.Drawing.Point(91, 250);
+            this.fechana.Location = new System.Drawing.Point(74, 290);
             this.fechana.Name = "fechana";
             this.fechana.Size = new System.Drawing.Size(160, 21);
             this.fechana.TabIndex = 34;
@@ -253,7 +255,7 @@
             // 
             this.direc.AutoSize = true;
             this.direc.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.direc.Location = new System.Drawing.Point(91, 210);
+            this.direc.Location = new System.Drawing.Point(89, 248);
             this.direc.Name = "direc";
             this.direc.Size = new System.Drawing.Size(78, 21);
             this.direc.TabIndex = 33;
@@ -263,7 +265,7 @@
             // 
             this.apematerno.AutoSize = true;
             this.apematerno.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apematerno.Location = new System.Drawing.Point(91, 167);
+            this.apematerno.Location = new System.Drawing.Point(74, 210);
             this.apematerno.Name = "apematerno";
             this.apematerno.Size = new System.Drawing.Size(133, 21);
             this.apematerno.TabIndex = 32;
@@ -292,7 +294,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 17);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(658, 712);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -334,11 +336,32 @@
             this.Tipo_txt.Size = new System.Drawing.Size(309, 20);
             this.Tipo_txt.TabIndex = 63;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(607, 52);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 64;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(422, 637);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(112, 44);
+            this.button2.TabIndex = 65;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Registro_Alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(694, 741);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Tipo_txt);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Fecha_inscripcion);
@@ -411,5 +434,7 @@
         private System.Windows.Forms.DateTimePicker Fecha_inscripcion;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox Tipo_txt;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

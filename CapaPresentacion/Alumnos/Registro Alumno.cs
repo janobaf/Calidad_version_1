@@ -78,5 +78,15 @@ namespace CapaPresentacion
             p_inscripcionprincipal p_Inscripcionprincipal = new p_inscripcionprincipal();
             p_Inscripcionprincipal.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string dn1i = dni.Text+" ";
+            if (L_Alumno.Instancia.verificar_existencia_alumno(dni.Text))
+            {
+
+            }
+
+        }
     }
 }

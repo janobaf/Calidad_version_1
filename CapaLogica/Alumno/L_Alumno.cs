@@ -86,6 +86,11 @@ namespace CapaLogica
             return lista.Count > 0 ? lista : null;
 
         }
+
+        public bool verificar_existencia_alumno(string dni)
+        {
+            return CD_Alumno.Instancia.validar_dni(dni) == true ?  true : false;
+        }
         #endregion metodos
 
         /*
