@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>CapaPresentacion</RootNamespace>
     <AssemblyName>CapaPresentacion</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -27,6 +27,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -102,11 +103,11 @@
     <Compile Include="Alumnos\Registro Alumno.Designer.cs">
       <DependentUpon>Registro Alumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Calificaciones\Listar Calificaciones.cs">
+    <Compile Include="Calificaciones\CalificacionesList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Calificaciones\Listar Calificaciones.Designer.cs">
-      <DependentUpon>Listar Calificaciones.cs</DependentUpon>
+    <Compile Include="Calificaciones\CalificacionesList.Designer.cs">
+      <DependentUpon>CalificacionesList.cs</DependentUpon>
     </Compile>
     <Compile Include="Calificaciones\Modificar_Calificaciones.cs">
       <SubType>Form</SubType>
@@ -114,11 +115,17 @@
     <Compile Include="Calificaciones\Modificar_Calificaciones.Designer.cs">
       <DependentUpon>Modificar_Calificaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Calificaciones\Registro Calificaciones.cs">
+    <Compile Include="Calificaciones\p_CalificacionesPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Calificaciones\Registro Calificaciones.Designer.cs">
-      <DependentUpon>Registro Calificaciones.cs</DependentUpon>
+    <Compile Include="Calificaciones\p_CalificacionesPrincipal.Designer.cs">
+      <DependentUpon>p_CalificacionesPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calificaciones\Registrar_Calificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calificaciones\Registrar_Calificaciones.Designer.cs">
+      <DependentUpon>Registrar_Calificaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Curso\Listar Curso.cs">
       <SubType>Form</SubType>
@@ -155,14 +162,17 @@
     <EmbeddedResource Include="Alumnos\Registro Alumno.resx">
       <DependentUpon>Registro Alumno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Calificaciones\Listar Calificaciones.resx">
-      <DependentUpon>Listar Calificaciones.cs</DependentUpon>
+    <EmbeddedResource Include="Calificaciones\CalificacionesList.resx">
+      <DependentUpon>CalificacionesList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Calificaciones\Modificar_Calificaciones.resx">
       <DependentUpon>Modificar_Calificaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Calificaciones\Registro Calificaciones.resx">
-      <DependentUpon>Registro Calificaciones.cs</DependentUpon>
+    <EmbeddedResource Include="Calificaciones\p_CalificacionesPrincipal.resx">
+      <DependentUpon>p_CalificacionesPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calificaciones\Registrar_Calificaciones.resx">
+      <DependentUpon>Registrar_Calificaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Curso\Listar Curso.resx">
       <DependentUpon>Listar Curso.cs</DependentUpon>
@@ -181,6 +191,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
