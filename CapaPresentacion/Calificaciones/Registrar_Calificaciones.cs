@@ -46,13 +46,15 @@ namespace CapaPresentacion.Calificaciones
             E_Calificaciones e_Calificaciones = new E_Calificaciones();
 
             //llamamos al metod y le enviamos e_Calificaciones para que le llene
+           
             seteoEntidad(e_Calificaciones);
 
             //ahora ya esta lleno e_Calificaciones
 
             //declare un dni porque el metodo crear quiere necesita un dni
             string dni = DNI_TXT.Text;
-            CL_calificaciones.Instancia.crear_calificaciones(e_Calificaciones, dni);
+            MessageBox.Show("set: "+dni+" "+e_Calificaciones.Califi_ID+" ");
+            //CL_calificaciones.Instancia.crear_calificaciones(e_Calificaciones, dni);
         }
 
         private void Salirbutton1_Click(object sender, EventArgs e)
